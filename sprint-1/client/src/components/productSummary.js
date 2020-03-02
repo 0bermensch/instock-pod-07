@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function header() {
+export default function productSummary() {
   return <div></div>;
 }
