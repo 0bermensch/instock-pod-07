@@ -3,17 +3,11 @@ import Logo from "../Assets/Logo/Logo-instock.svg";
 
 function Header() {
   return (
-    <header className="header">
-      <img src={Logo} />
-      <nav className="header__nav">
-        <div className="header__nav-inventory">
-          <a>INVENTORY</a>
-        </div>
-        <div className="header__nav-list">
-          <a>LOCATIONS</a>
-        </div>
-      </nav>
-    </header>
+    <div className="header">
+      <img className="header__logo" src={Logo} alt="Logo" />
+      <h2 className="header__inventory">Inventory</h2>
+      <h2 className="header__location">Locations</h2>
+    </div>
   );
 }
 
