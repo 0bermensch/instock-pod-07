@@ -4,7 +4,7 @@ export default function productSummary() {
   return (
     <div className="product">
       <div className="product__header">
-        <h1 className="product__header-title">Product Name</h1>
+        <h1 className="product__header-title"> &lt; Product Name</h1>
         <span className="product__header-stock">In Stock</span>
       </div>
       <div className="product__detail">
@@ -15,30 +15,31 @@ export default function productSummary() {
         <div className="product__right">
           <div className="product__info">
             <div className="product__info-order">
-              <p className="product__info-order-by">ORDERED BY</p>
-              <p className="product__info-order-name">Mark Saunders</p>
+              <p className="product__info-order-title">ORDERED BY</p>
+              <p className="product__info-order-value">Mark Saunders</p>
             </div>
             <div className="product__info-ref">
-              <p className="product__info-ref-ref">REFERENCE NUMBER</p>
-              <p className="product__info-ref-number">JK2020FD7811201</p>
+              <p className="product__info-ref-title">REFERENCE NUMBER</p>
+              <p className="product__info-ref-value">JK2020FD7811201</p>
             </div>
           </div>
-          <div>
-            <div>
-              <p>LAST ORDERED</p>
-              <p></p>
+          <div className="product__info">
+            <div className="product__info-last-order">
+              <p className="product__info-last-title">LAST ORDERED</p>
+              <p className="product__info-last-value"></p>
             </div>
-            <div>
-              <p>LOCATION</p>
-              <p></p>
+            <div className="product__info-location">
+              <p className="product__info-location-title">LOCATION</p>
+              <p className="product__info-location-value"></p>
             </div>
           </div>
-
-          <div>
-            <p>QUANTITY</p>
-            <p></p>
+          <div className="product__info-qty">
+            <p className="product__info-qty-title">QUANTITY</p>
+            <p className="product__info-qty-value">120000</p>
           </div>
         </div>
+        <p className="product__category-title">CATEGORIES</p>
+        <p className="product__category-value">Industrial</p>
       </div>
     </div>
   );

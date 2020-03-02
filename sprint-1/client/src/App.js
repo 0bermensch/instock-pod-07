@@ -1,7 +1,14 @@
 import React from "react";
+import Header from "./components/Header";
+import ProductSummary from "./components/productSummary";
 
-function App() {
-  return <div className="App"></div>;
+export default class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Header />
+        <ProductSummary />
+      </>
+    );
+  }
 }
-
-export default App;

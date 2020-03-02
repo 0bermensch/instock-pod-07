@@ -1,18 +1,20 @@
 import React from "react";
-import logo from "../Assets/Logo/Logo-instock.svg";
+import Logo from "../Assets/Logo/Logo-instock.svg";
 
-export default function header() {
+function Header() {
   return (
-    <header class="header">
-      <img src={logo} />
-      <nav class="header__nav">
-        <div class="header__nav-list header__nav-list--active">
-          <Link to="/">Inventory</Link>
+    <header className="header">
+      <img src={Logo} />
+      <nav className="header__nav">
+        <div className="header__nav-inventory">
+          <a>INVENTORY</a>
         </div>
-        <div class="header__nav-list">
-          <Link to="/locations">Locations</Link>
+        <div className="header__nav-list">
+          <a>LOCATIONS</a>
         </div>
       </nav>
     </header>
   );
 }
+
+export default Header;
