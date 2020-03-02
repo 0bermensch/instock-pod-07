@@ -1,0 +1,9 @@
+.product {
+  margin: 1rem;
+
+  &__header {
+    &-title {
+      @include header;
+    }
+  }
+}
