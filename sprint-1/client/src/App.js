@@ -10,6 +10,7 @@ export default class App extends React.Component {
     locations: []
   };
 
+
   componentDidMount() {
     axios.get("api/locations").then(response => {
       this.setState({
@@ -17,6 +18,7 @@ export default class App extends React.Component {
       });
     });
   }
+
 
   render() {
     return (
@@ -41,6 +43,17 @@ export default class App extends React.Component {
                 );
               }}
             ></Route>
+            <Route
+              path="/inventory"
+              render={() => {
+                return (
+                  <>
+                    <Header />
+                    <Inventoryfe />
+                  </>
+                );
+              }}
+            />
             <Route
               path="/locations"
               render={() => {
