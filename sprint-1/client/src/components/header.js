@@ -1,16 +1,17 @@
 import React from "react";
 import Logo from "../Assets/Logo/Logo-instock.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header class="header">
+    <header className="header">
       <img className="header__logo" src={Logo} alt="Logo" />
-      <nav class="header__nav">
-        <div class="header__nav-list header__nav-list--active">
-          <a href="./index.html">Biography</a>
+      <nav className="header__nav">
+        <div className="header__nav-inventory">
+          <Link to="/">Inventory</Link>
         </div>
-        <div class="header__nav-list">
-          <a href="./pages/show.html">Shows</a>
+        <div className="header__nav-location">
+          <Link to="/locations">Locations</Link>
         </div>
       </nav>
     </header>

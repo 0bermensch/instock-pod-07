@@ -10,10 +10,14 @@ export default function productSummary() {
       <div className="product__detail">
         <div className="product__left">
           <p className="product__description-title">ITEM DESCRIPTION</p>
-          <p className="product__description-description">desc</p>
+          <p className="product__description-description">
+            Here is a more detailed summary of the product name, it’s uses,
+            industries and possible attributes that could be used to describe
+            the product.
+          </p>
         </div>
         <div className="product__right">
-          <div className="product__info">
+          {/* <div className="product__info">
             <div className="product__info-order">
               <p className="product__info-order-title">ORDERED BY</p>
               <p className="product__info-order-value">Mark Saunders</p>
@@ -22,24 +26,30 @@ export default function productSummary() {
               <p className="product__info-ref-title">REFERENCE NUMBER</p>
               <p className="product__info-ref-value">JK2020FD7811201</p>
             </div>
-          </div>
+          </div> */}
           <div className="product__info">
             <div className="product__info-last-order">
               <p className="product__info-last-title">LAST ORDERED</p>
-              <p className="product__info-last-value"></p>
+              <p className="product__info-last-value">5/24/2018</p>
             </div>
             <div className="product__info-location">
               <p className="product__info-location-title">LOCATION</p>
-              <p className="product__info-location-value"></p>
+              <p className="product__info-location-value">Toronto, CAN</p>
             </div>
           </div>
           <div className="product__info-qty">
             <p className="product__info-qty-title">QUANTITY</p>
             <p className="product__info-qty-value">120000</p>
           </div>
+          <p className="product__info-category-title">CATEGORIES</p>
+          <p className="product__info-category-value">
+            Industrial, Automotive, Heavy, Mechanical, Engineering,
+            Transportation, Sales
+          </p>
         </div>
-        <p className="product__category-title">CATEGORIES</p>
-        <p className="product__category-value">Industrial</p>
+      </div>
+      <div className="product__edit-button-wrap">
+        <button className="product__edit-button">EDIT</button>
       </div>
     </div>
   );
