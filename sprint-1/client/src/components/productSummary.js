@@ -1,10 +1,14 @@
 import React from "react";
+import backIcon from "../Assets/Icons/SVG/Icon-back-arrow.svg";
 
 export default function productSummary() {
   return (
     <div className="product">
       <div className="product__header">
-        <h1 className="product__header-title"> &lt; Product Name</h1>
+        <h1 className="product__header-title">
+          <img src={backIcon} alt="back-arrow" />
+          &nbsp;&nbsp;Product Name
+        </h1>
         <span className="product__header-stock">In Stock</span>
       </div>
       <div className="product__detail">

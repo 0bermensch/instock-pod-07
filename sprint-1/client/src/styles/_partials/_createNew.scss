@@ -1,0 +1,84 @@
+.modal {
+  padding: 0 1rem 3rem 1rem;
+
+  &__title {
+    margin: 2rem 0 2rem 0;
+    @include header;
+    font-family: "avenir-bold";
+  }
+  &__sub-title {
+    @include labels-m;
+    font-family: "avenir-demi";
+    color: $silver;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+  &__switch-wrapper {
+    display: flex;
+  }
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1rem;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    :before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+  }
+}
+
+@include tablet {
+  .modal {
+    padding: 0 3rem 3rem 3rem;
+    &__title {
+      margin: 3.5rem 0 1.5rem 0;
+    }
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      &-left {
+        flex: 0.45833;
+      }
+      &-right {
+        flex: 0.45833;
+      }
+    }
+    &__btns {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__cancel-btn {
+      margin-top: 2.5rem;
+      order: -1;
+      flex: 0.333333;
+    }
+    &__save-btn {
+      flex: 0.333333;
+    }
+  }
+}

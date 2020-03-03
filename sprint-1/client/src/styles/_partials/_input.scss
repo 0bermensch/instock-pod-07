@@ -1,0 +1,13 @@
+input {
+  background-color: $alabaster;
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  height: 3rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+textarea {
+  @extend input;
+  height: 5rem;
+}

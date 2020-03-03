@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/header";
 import Locations from "./components/Locations";
 import ProductSummary from "./components/productSummary";
+import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
@@ -10,7 +11,6 @@ export default class App extends React.Component {
     locations: []
   };
 
-
   componentDidMount() {
     axios.get("api/locations").then(response => {
       this.setState({
@@ -18,7 +18,6 @@ export default class App extends React.Component {
       });
     });
   }
-
 
   render() {
     return (
@@ -29,7 +28,12 @@ export default class App extends React.Component {
               path="/"
               exact
               render={() => {
-                return <Header />;
+                return (
+                  <>
+                    <Header />
+                    <CreateNew />
+                  </>
+                );
               }}
             />
             <Route
