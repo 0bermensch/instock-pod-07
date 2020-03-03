@@ -62,3 +62,25 @@
     }
   }
 }
+
+@include tablet {
+  .product {
+    margin: 1.5rem;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $mercury;
+      &-title {
+        @include header;
+        margin-right: 2rem;
+      }
+      &-stock {
+        height: 30%;
+      }
+    }
+    &__left {
+      margin-right: 6.25rem;
+    }
+  }
+}
