@@ -4,6 +4,7 @@
   &__header {
     &-title {
       @include header-m;
+      vertical-align: middle;
       font-family: "avenir-bold";
       color: $black;
     }

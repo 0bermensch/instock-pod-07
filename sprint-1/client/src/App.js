@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/header";
 import Locations from "./components/Locations";
 import ProductSummary from "./components/productSummary";
+import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default class App extends React.Component {
@@ -18,7 +19,12 @@ export default class App extends React.Component {
               path="/"
               exact
               render={() => {
-                return <Header />;
+                return (
+                  <>
+                    <Header />
+                    <CreateNew />
+                  </>
+                );
               }}
             />
             <Route

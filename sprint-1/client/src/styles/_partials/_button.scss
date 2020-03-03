@@ -7,3 +7,10 @@ button {
   height: 3rem;
   width: 100%;
 }
+.modal__cancel-btn {
+  color: $instock-blue;
+  background-color: $white;
+}
+.modal__save-btn {
+  margin-top: 2.5rem;
+}
