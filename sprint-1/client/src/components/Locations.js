@@ -1,29 +1,36 @@
 import React from "react";
 
-function Locations() {
+const Locations = props => {
+  console.log(props);
   return (
     <div className="locations">
       <h1 className="locations__header">Locations</h1>
       <input className="locations__search" type="text" placeholder="Search" />
       <div className="locations__info">
         <div className="locations__info-section">
-          <h4 className="locations__location">Warehouse Number 1</h4>
-          <p className="locations__address">469 King St W, Toronto, ON</p>
+          <h4 className="locations__location">{props.locations.warehouse}</h4>
+          <p className="locations__address">{props.locations.address}</p>
         </div>
         <div className="locations__info-section">
-          <p className="locations__contact-person">Mara Weinberg</p>
-          <p className="locations__contact-position">Warehouse Manager</p>
+          <p className="locations__contact-person">
+            {props.locations.contactPerson}
+          </p>
+          <p className="locations__contact-position">
+            {props.locations.contactPosition}
+          </p>
         </div>
         <div className="locations__info-section">
-          <p className="locations__contact-number">+1 416 678 2345</p>
-          <p className="locations__contact-email">weinberg@instack.com</p>
+          <p className="locations__contact-number">
+            {props.locations.contactNumber}
+          </p>
+          <p className="locations__contact-email">
+            {props.locations.contactEmail}
+          </p>
         </div>
-        <p className="locations__categories">
-          Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation
-        </p>
+        <p className="locations__categories">{props.locations.categories}</p>
       </div>
     </div>
   );
-}
+};
 
 export default Locations;
