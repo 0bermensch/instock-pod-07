@@ -6,11 +6,11 @@ function Header() {
     <header class="header">
       <img className="header__logo" src={Logo} alt="Logo" />
       <nav class="header__nav">
-        <div class="header__nav-list header__nav-list--active">
-          <a href="./index.html">Biography</a>
+        <div class="header__nav-inventory">
+          <a href="./index.html">Inventory</a>
         </div>
-        <div class="header__nav-list">
-          <a href="./pages/show.html">Shows</a>
+        <div class="header__nav-location">
+          <a href="./pages/show.html">Locations</a>
         </div>
       </nav>
     </header>
