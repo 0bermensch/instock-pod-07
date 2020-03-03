@@ -2,18 +2,25 @@ a {
   text-decoration: none;
   color: $white;
 }
-
 .header {
   background-color: $black;
   height: 80px;
   color: $white;
   text-align: center;
-
+  padding-top: 1rem;
+  &__logo {
+    padding-bottom: 1rem;
+  }
   &__nav {
     display: flex;
+    flex: 1;
     justify-content: space-evenly;
     align-items: center;
-    flex: 1;
     @include lists-m;
+    font-family: "avenir-demi";
+    &-inventory,
+    &-location {
+      flex: 0.5;
+    }
   }
 }

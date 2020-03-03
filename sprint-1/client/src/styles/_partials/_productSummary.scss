@@ -3,7 +3,62 @@
 
   &__header {
     &-title {
-      @include header;
+      @include header-m;
+      font-family: "avenir-bold";
+      color: $black;
+    }
+    &-stock {
+      @include labels-m;
+      font-family: "avenir-demi";
+      color: $white;
+      background-color: rgb(59, 145, 59);
+      padding: 0.2rem 1.5rem;
+      border-radius: 4px;
+    }
+  }
+  &__description {
+    &-title {
+      @include labels-m;
+      font-family: "avenir-demi";
+      color: $silver;
+    }
+    &-description {
+      @include labels-m;
+      line-height: 1rem;
+      margin-bottom: 2rem;
+      color: $black;
+    }
+  }
+
+  &__info {
+    &-order-title,
+    &-ref-title,
+    &-last-title,
+    &-location-title,
+    &-qty-title,
+    &-category-title {
+      margin: 0;
+      @include labels-m;
+      font-family: "avenir-demi";
+      color: $silver;
+      line-height: 1rem;
+    }
+
+    &-order-value,
+    &-ref-value,
+    &-last-value,
+    &-location-value,
+    &-qty-value,
+    &-category-value {
+      margin: 1rem 0 1rem 0;
+      @include labels-m;
+      font-size: 0.8rem;
+      color: $black;
+      line-height: 1rem;
+      font-size: 0.7rem;
+    }
+    &-category-value {
+      margin-right: 3.375rem;
     }
   }
 }
