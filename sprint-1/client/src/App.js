@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 export default class App extends React.Component {
   state = {};
 
+  // name the inventory info as inventoryInfo
+
   componentDidMount() {}
 
   render() {
@@ -32,6 +34,17 @@ export default class App extends React.Component {
                 );
               }}
             ></Route>
+            <Route
+              path="/inventory"
+              render={() => {
+                return (
+                  <>
+                    <Header />
+                    <Inventoryfe />
+                  </>
+                );
+              }}
+            />
             <Route
               path="/locations"
               render={() => {
