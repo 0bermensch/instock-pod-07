@@ -7,10 +7,209 @@
   &__head--title {
     margin-top: 32px;
     font-family: "avenir-bold";
-    @include header-2;
+    @include header-m;
+    color: $black;
   }
   &__head--search {
+    margin-top: 16px;
     height: 40px;
     width: 90%;
+  }
+  &__title {
+    display: none;
+  }
+  &__maincontent {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.5px solid $silver;
+  }
+  &__information {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    font-family: "avenir-demi";
+    @include lists-m;
+    color: $silver;
+    margin-top: 32px;
+  }
+  &__item--name {
+    font-family: "avenir-demi";
+    @include lists-m;
+    color: $black;
+    margin-top: 16px;
+  }
+  &__item--description {
+    font-family: "avenir-light";
+    @include labels-m;
+    color: $black;
+    margin-top: 16px;
+  }
+  &__lastorder {
+    font-family: "avenir-demi";
+    @include lists-m;
+    color: $silver;
+    margin-top: 24px;
+  }
+  &__lastorder--date {
+    font-family: "avenir-light";
+    @include labels-m;
+    color: $black;
+    margin-top: 16px;
+  }
+  &__location {
+    @include lists-m;
+    color: $silver;
+    margin-top: 24px;
+  }
+  &__location--info {
+    display: flex;
+    flex-direction: row;
+  }
+  &__location--city {
+    font-family: "avenir-light";
+    @include labels-m;
+    color: $black;
+    margin-top: 16px;
+  }
+  &__location--country {
+    font-family: "avenir-light";
+    @include labels-m;
+    color: $black;
+    margin-top: 16px;
+  }
+  &__quantity {
+    @include lists-m;
+    color: $silver;
+    margin-top: 24px;
+  }
+  &__quantity--value {
+    font-family: "avenir-light";
+    @include labels-m;
+    color: $black;
+    margin-top: 16px;
+  }
+  &__status {
+    @include lists-m;
+    color: $silver;
+    margin-top: 24px;
+  }
+  &__status--display {
+    font-family: "avenir-light";
+    @include labels-m;
+    color: $black;
+    margin-top: 16px;
+  }
+}
+
+@include tablet {
+  .inventory {
+    margin: 0 3.125%;
+    &__head {
+      display: flex;
+      flex-direction: column;
+    }
+    &__head--title {
+      margin-top: 32px;
+      font-family: "avenir-bold";
+      @include header-2;
+      color: $black;
+    }
+    &__head--search {
+      margin-top: 16px;
+      height: 40px;
+      width: 90%;
+    }
+    &__title {
+      display: flex;
+      flex-direction: row;
+    }
+    &__maincontent {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid $silver;
+    }
+    &__information {
+      display: flex;
+      flex-direction: row;
+    }
+    &__item {
+      display: none;
+      font-family: "avenir-demi";
+      @include lists-m;
+      color: $silver;
+      margin-top: 32px;
+    }
+    &__item--name {
+      font-family: "avenir-demi";
+      @include lists-m;
+      color: $black;
+      margin-top: 16px;
+    }
+    &__item--description {
+      font-family: "avenir-light";
+      @include labels-m;
+      color: $black;
+      margin-top: 16px;
+    }
+    &__lastorder {
+      display: none;
+      font-family: "avenir-demi";
+      @include lists-m;
+      color: $silver;
+      margin-top: 24px;
+    }
+    &__lastorder--date {
+      font-family: "avenir-light";
+      @include labels-m;
+      color: $black;
+      margin-top: 16px;
+    }
+    &__location {
+      display: none;
+      @include lists-m;
+      color: $silver;
+      margin-top: 24px;
+    }
+    &__location--info {
+      display: flex;
+      flex-direction: row;
+    }
+    &__location--city {
+      font-family: "avenir-light";
+      @include labels-m;
+      color: $black;
+      margin-top: 16px;
+    }
+    &__location--country {
+      font-family: "avenir-light";
+      @include labels-m;
+      color: $black;
+      margin-top: 16px;
+    }
+    &__quantity {
+      display: none;
+      @include lists-m;
+      color: $silver;
+      margin-top: 24px;
+    }
+    &__quantity--value {
+      font-family: "avenir-light";
+      @include labels-m;
+      color: $black;
+      margin-top: 16px;
+    }
+    &__status {
+      display: none;
+      @include lists-m;
+      color: $silver;
+      margin-top: 24px;
+    }
+    &__status--display {
+      font-family: "avenir-light";
+      @include labels-m;
+      color: $black;
+      margin-top: 16px;
+    }
   }
 }
