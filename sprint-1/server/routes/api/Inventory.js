@@ -48,4 +48,8 @@ router.post("/", (req, res) => {
   res.json(inventoryItems);
 });
 
+// router.delete("/:id" , (req,res)=>{
+//   const inventoryList = inventoryItems.filter(item =>);
+
+// });
 module.exports = router;

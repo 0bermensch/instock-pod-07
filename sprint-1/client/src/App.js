@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/header";
 import Locations from "./components/Locations";
 import ProductSummary from "./components/productSummary";
+//import Inventoryfe from "./components/Inventoryfe";
 import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
@@ -53,7 +54,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <Inventoryfe />
+                    {/* <Inventoryfe /> */}
                   </>
                 );
               }}
