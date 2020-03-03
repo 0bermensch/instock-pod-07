@@ -5,6 +5,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static("public"));
+
 const inventoryRoute = require("./routes/api/Inventory");
 app.use("/", inventoryRoute);
 
