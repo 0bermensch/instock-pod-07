@@ -1,5 +1,3 @@
-//border-bottom:4px solid $white;
-
 a {
   text-decoration: none;
   color: $white;
@@ -11,7 +9,7 @@ a {
   text-align: center;
   padding-top: 1rem;
   &__logo {
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
   }
   &__nav {
     display: flex;
@@ -20,8 +18,13 @@ a {
     align-items: center;
     @include lists-m;
     font-family: "avenir-demi";
-    &-inventory,
+    &-inventory {
+      flex: 0.5;
+      padding-bottom: 0.8rem;
+      border-bottom: 4px solid $white;
+    }
     &-location {
+      padding-bottom: 0.8rem;
       flex: 0.5;
     }
   }
@@ -39,6 +42,15 @@ a {
       flex: 0.4;
       justify-content: flex-start;
       align-items: center;
+
+      &-inventory {
+        padding: 2rem 0 1.6rem 0;
+        margin: 0 1rem 0 1rem;
+      }
+      &-location {
+        padding: 2rem 0 1.6rem 0;
+        margin: 0 1rem 0 1rem;
+      }
     }
     &__logo {
       padding: 0;
