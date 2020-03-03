@@ -4,11 +4,20 @@ import Locations from "./components/Locations";
 import ProductSummary from "./components/productSummary";
 import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import axios from "axios";
 
 export default class App extends React.Component {
-  state = {};
+  state = {
+    locations: []
+  };
 
-  componentDidMount() {}
+  componentDidMount() {
+    axios.get("api/locations").then(response => {
+      this.setState({
+        locations: response.data[0]
+      });
+    });
+  }
 
   render() {
     return (
@@ -39,12 +48,23 @@ export default class App extends React.Component {
               }}
             ></Route>
             <Route
+              path="/inventory"
+              render={() => {
+                return (
+                  <>
+                    <Header />
+                    <Inventoryfe />
+                  </>
+                );
+              }}
+            />
+            <Route
               path="/locations"
               render={() => {
                 return (
                   <>
                     <Header />
-                    <Locations />
+                    <Locations locations={this.state.locations} />
                   </>
                 );
               }}

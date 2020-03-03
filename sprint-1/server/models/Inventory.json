@@ -4,7 +4,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "In Stock"
   },
@@ -13,7 +14,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "Out of Stock"
   },
@@ -22,7 +24,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "In Stock"
   },
@@ -31,7 +34,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "Out of Stock"
   },
@@ -40,7 +44,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "In Stock"
   },
@@ -49,7 +54,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "Out of Stock"
   },
@@ -58,7 +64,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "In Stock"
   },
@@ -67,7 +74,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "Out of Stock"
   },
@@ -76,7 +84,8 @@
     "productname": "Product Name Here",
     "productdescription": "Here is a very brief description of the product...",
     "lastordered": "05/24/2018",
-    "location": "Toronto, CAN",
+    "city": "Toronto",
+    "country": "CAN",
     "quantity": "12,000",
     "status": "Out of Stock"
   }

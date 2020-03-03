@@ -7,7 +7,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const inventoryRoute = require("./routes/api/Inventory");
-app.use("/", inventoryRoute);
+app.use("/api/Inventory", inventoryRoute);
+
+const locationsRoute = require("./routes/api/locations");
+app.use("/api/locations", locationsRoute);
 
 const port = 5000;
 app.listen(port, () => {
