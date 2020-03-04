@@ -2,42 +2,46 @@
   {
     "id": "1",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "status": "Out of Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "2",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "Out of Stock"
+    "status": "Out of Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "3",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "status": "In Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "4",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "Out of Stock"
+    "status": "Out of Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "5",
@@ -47,46 +51,51 @@
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "status": "In Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "6",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "Out of Stock"
+    "status": "Out of Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "7",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "status": "In Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "8",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "Out of Stock"
+    "status": "Out of Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   },
   {
     "id": "9",
     "productname": "Product Name Here",
-    "productdescription": "Here is a very brief description of the product...",
+    "productdescription": "Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product.",
     "lastordered": "05/24/2018",
     "city": "Toronto",
     "country": "CAN",
     "quantity": "12,000",
-    "status": "Out of Stock"
+    "status": "Out of Stock",
+    "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
   }
 ]

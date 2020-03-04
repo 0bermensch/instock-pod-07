@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
       city: inventoryItem.city,
       country: inventoryItem.country,
       quantity: inventoryItem.quantity,
-      status: inventoryItem.status
+      status: inventoryItem.status,
+      category: inventoryItem.category
     };
   });
   res.json(inventoryList);
@@ -48,4 +49,9 @@ router.post("/", (req, res) => {
   res.json(inventoryItems);
 });
 
+router.delete("/:id", (req, res) => {
+  const newInventory = inventoryItems.filter(item => item.id !== req.params.id);
+  helper.writeJSONFile(inventoryFile, newInventory);
+  res.json(newInventory);
+});
 module.exports = router;

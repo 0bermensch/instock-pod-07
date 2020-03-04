@@ -1,7 +1,7 @@
 import React from "react";
 import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 
-function Inventoryfe() {
+function Inventoryfe(props) {
   let inventoryElements = props.inventoryInfo.map((inventorythings, index) => {
     return (
       <>
