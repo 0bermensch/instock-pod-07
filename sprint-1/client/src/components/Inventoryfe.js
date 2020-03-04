@@ -2,41 +2,41 @@ import React from "react";
 import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 import searchicon from "../Assets/Icons/SVG/Icon-search.svg";
 
-function Inventoryfe(props) {
-  console.log(props);
-  let inventoryElements = props.inventoryInfo.map((inventorythings, index) => {
+const Inventoryfe = props => {
+  //console.log(props.inventoryInfo);
+  let inventoryElements = props.inventory.map((inventorythings, index) => {
     return (
       <>
         <div className="inventory__information">
           <div className="inventory__item">
             <h2 className="inventory__item--title">ITEM</h2>
             <h3 className="inventory__item--name">
-              {props.inventorythings.productname}
+              {inventorythings.productname}
             </h3>
             <h3 className="inventory__item--description">
-              {props.inventorythings.productdescription}
+              {inventorythings.productdescription}
             </h3>
           </div>
           <h2 className="inventory__lastorder">LAST ORDERED</h2>
           <h3 className="inventory__lastorder--date">
-            {props.inventorythings.lastordered}
+            {inventorythings.lastordered}
           </h3>
           <h2 className="inventory__location">LOCATION</h2>
           <div className="inventory__location--info">
             <h3 className="inventory__location--city">
-              {props.inventorythings.city}
+              {inventorythings.city}
             </h3>
             <h3 className="inventory__location--country">
-              {props.inventorythings.country}
+              {inventorythings.country}
             </h3>
           </div>
           <h2 className="inventory__quantity">QUANTITY</h2>
           <h3 className="inventory__quantity--value">
-            {props.inventorythings.quantity}
+            {inventorythings.quantity}
           </h3>
           <h2 className="inventory__status">STATUS</h2>
           <h3 className="inventory__status--display">
-            {props.inventorythings.status}
+            {inventorythings.status}
           </h3>
         </div>
         <button className="inventory__remove" src={removebutton} />
@@ -60,6 +60,6 @@ function Inventoryfe(props) {
       <button className="inventory__additem" type="button" />
     </div>
   );
-}
+};
 
 export default Inventoryfe;

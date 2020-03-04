@@ -21,7 +21,7 @@ export default class App extends React.Component {
         locations: response.data[0]
       });
     });
-    axios.get("api/Inventory").then(response => {
+    axios.get("/api/Inventory").then(response => {
       this.setState({ inventory: response.data });
       // to be changed dynamically.
       this.setState({ product: response.data[0] });
@@ -40,7 +40,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <Inventoryfe />
+                    <Inventoryfe inventory={this.state.inventory} />
                   </>
                 );
               }}
@@ -62,7 +62,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <Inventoryfe />
+                    <Inventoryfe inventory={this.state.inventory} />
                   </>
                 );
               }}
