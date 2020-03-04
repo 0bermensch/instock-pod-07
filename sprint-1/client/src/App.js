@@ -3,18 +3,25 @@ import Header from "./components/header";
 import Locations from "./components/Locations";
 import ProductSummary from "./components/productSummary";
 import CreateNew from "./components/createNew";
+import Inventoryfe from "./components/Inventoryfe";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 export default class App extends React.Component {
   state = {
-    locations: []
+    locations: [],
+    inventory: []
   };
 
   componentDidMount() {
     axios.get("api/locations").then(response => {
       this.setState({
         locations: response.data[0]
+      });
+    });
+    axios.get("api/inventory").then(response => {
+      this.setState({
+        inventory: response.data
       });
     });
   }
@@ -53,7 +60,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <Inventoryfe />
+                    <Inventoryfe inventory={this.state.inventory} />
                   </>
                 );
               }}

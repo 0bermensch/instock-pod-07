@@ -2,7 +2,7 @@ import React from "react";
 import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 import searchicon from "../Assets/Icons/SVG/Icon-search.svg";
 
-function Inventoryfe() {
+function Inventoryfe(props) {
   let inventoryElements = props.inventoryInfo.map((inventorythings, index) => {
     return (
       <>
@@ -10,32 +10,32 @@ function Inventoryfe() {
           <div className="inventory__item">
             <h2 className="inventory__item--title">ITEM</h2>
             <h3 className="inventory__item--name">
-              {inventorythings.productname}
+              {props.inventorythings.productname}
             </h3>
             <h3 className="inventory__item--description">
-              {inventorythings.productdescription}
+              {props.inventorythings.productdescription}
             </h3>
           </div>
           <h2 className="inventory__lastorder">LAST ORDERED</h2>
           <h3 className="inventory__lastorder--date">
-            {inventorythings.lastordered}
+            {props.inventorythings.lastordered}
           </h3>
           <h2 className="inventory__location">LOCATION</h2>
           <div className="inventory__location--info">
             <h3 className="inventory__location--city">
-              {inventorythings.city}
+              {props.inventorythings.city}
             </h3>
             <h3 className="inventory__location--country">
-              {inventorythings.country}
+              {props.inventorythings.country}
             </h3>
           </div>
           <h2 className="inventory__quantity">QUANTITY</h2>
           <h3 className="inventory__quantity--value">
-            {inventorythings.quantity}
+            {props.inventorythings.quantity}
           </h3>
           <h2 className="inventory__status">STATUS</h2>
           <h3 className="inventory__status--display">
-            {inventorythings.status}
+            {props.inventorythings.status}
           </h3>
         </div>
         <button className="inventory__remove" src={removebutton} />
