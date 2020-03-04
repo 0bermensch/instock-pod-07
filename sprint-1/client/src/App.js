@@ -2,13 +2,16 @@ import React from "react";
 import Header from "./components/header";
 import Locations from "./components/Locations";
 import ProductSummary from "./components/productSummary";
+import Inventoryfe from "./components/Inventoryfe";
 import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 export default class App extends React.Component {
   state = {
-    locations: []
+    locations: [],
+    inventory: [],
+    product: {}
   };
 
   componentDidMount() {
@@ -16,6 +19,11 @@ export default class App extends React.Component {
       this.setState({
         locations: response.data[0]
       });
+    });
+    axios.get("api/Inventory").then(response => {
+      this.setState({ inventory: response.data });
+      // to be changed dynamically.
+      this.setState({ product: response.data[0] });
     });
   }
 
@@ -42,7 +50,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <ProductSummary />
+                    <ProductSummary product={this.state.product} />
                   </>
                 );
               }}
