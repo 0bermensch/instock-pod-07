@@ -49,8 +49,9 @@ router.post("/", (req, res) => {
   res.json(inventoryItems);
 });
 
-// router.delete("/:id" , (req,res)=>{
-//   const inventoryList = inventoryItems.filter(item =>);
-
-// });
+router.delete("/:id", (req, res) => {
+  const newInventory = inventoryItems.filter(item => item.id !== req.params.id);
+  helper.writeJSONFile(inventoryFile, newInventory);
+  res.json(newInventory);
+});
 module.exports = router;

@@ -39,7 +39,6 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <CreateNew />
                   </>
                 );
               }}
@@ -61,7 +60,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    {/* <Inventoryfe /> */}
+                    <Inventoryfe />
                   </>
                 );
               }}
