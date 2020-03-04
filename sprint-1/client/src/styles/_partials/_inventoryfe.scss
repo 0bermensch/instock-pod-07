@@ -28,6 +28,10 @@
     flex-direction: column;
   }
   &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item--title {
     font-family: "avenir-demi";
     @include lists-m;
     color: $silver;
@@ -128,88 +132,103 @@
       display: flex;
       flex-direction: row;
       border-bottom: 1px solid $silver;
+      height: 100px;
     }
     &__information {
       display: flex;
       flex-direction: row;
+      margin: 24px 0;
     }
     &__item {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+    }
+    &__item--title {
       display: none;
       font-family: "avenir-demi";
-      @include lists-m;
+      @include lists;
       color: $silver;
-      margin-top: 32px;
+      margin-top: 0;
     }
     &__item--name {
       font-family: "avenir-demi";
-      @include lists-m;
+      @include lists;
       color: $black;
-      margin-top: 16px;
+      margin-top: 0;
     }
     &__item--description {
       font-family: "avenir-light";
-      @include labels-m;
+      @include labels;
       color: $black;
-      margin-top: 16px;
+      margin-top: 0;
     }
     &__lastorder {
       display: none;
       font-family: "avenir-demi";
-      @include lists-m;
+      @include lists;
       color: $silver;
-      margin-top: 24px;
+      margin-top: 0;
     }
     &__lastorder--date {
       font-family: "avenir-light";
-      @include labels-m;
+      @include labels;
       color: $black;
-      margin-top: 16px;
+      width: 13.8%;
+      margin-top: 0;
+      margin-left: 3.125%;
     }
     &__location {
       display: none;
-      @include lists-m;
+      @include lists;
       color: $silver;
-      margin-top: 24px;
+      margin-top: 0;
     }
     &__location--info {
       display: flex;
       flex-direction: row;
+      margin-left: 3.125%;
+      width: 13.8%;
     }
     &__location--city {
       font-family: "avenir-light";
-      @include labels-m;
+      @include labels;
       color: $black;
-      margin-top: 16px;
+      margin-top: 0;
     }
     &__location--country {
       font-family: "avenir-light";
-      @include labels-m;
+      @include labels;
       color: $black;
-      margin-top: 16px;
+      margin-top: 0;
     }
     &__quantity {
       display: none;
-      @include lists-m;
+      @include lists;
       color: $silver;
-      margin-top: 24px;
+      margin-top: 0;
     }
     &__quantity--value {
       font-family: "avenir-light";
-      @include labels-m;
+      @include labels;
       color: $black;
-      margin-top: 16px;
+      width: 13.8%;
+      margin-top: 0;
+      margin-left: 3.125%;
     }
     &__status {
       display: none;
-      @include lists-m;
+      @include lists;
       color: $silver;
-      margin-top: 24px;
+      margin-top: 0;
     }
     &__status--display {
       font-family: "avenir-light";
-      @include labels-m;
+      @include labels;
       color: $black;
-      margin-top: 16px;
+      width: 13.8%;
+      margin-top: 0;
+      margin-left: 3.125%;
     }
   }
 }

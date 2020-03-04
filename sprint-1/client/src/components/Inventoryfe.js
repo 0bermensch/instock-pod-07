@@ -7,13 +7,15 @@ function Inventoryfe() {
     return (
       <>
         <div className="inventory__information">
-          <h2 className="inventory__item">ITEM</h2>
-          <h3 className="inventory__item--name">
-            {inventorythings.productname}
-          </h3>
-          <h3 className="inventory__item--description">
-            {inventorythings.productdescription}
-          </h3>
+          <div className="inventory__item">
+            <h2 className="inventory__item--title">ITEM</h2>
+            <h3 className="inventory__item--name">
+              {inventorythings.productname}
+            </h3>
+            <h3 className="inventory__item--description">
+              {inventorythings.productdescription}
+            </h3>
+          </div>
           <h2 className="inventory__lastorder">LAST ORDERED</h2>
           <h3 className="inventory__lastorder--date">
             {inventorythings.lastordered}
