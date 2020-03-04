@@ -2,7 +2,8 @@ import React from "react";
 import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 import searchicon from "../Assets/Icons/SVG/Icon-search.svg";
 
-function Inventoryfe(props) {
+const Inventoryfe = props => {
+  console.log(props);
   let inventoryElements = props.inventoryInfo.map((inventorythings, index) => {
     return (
       <>
@@ -10,7 +11,7 @@ function Inventoryfe(props) {
           <div className="inventory__item">
             <h2 className="inventory__item--title">ITEM</h2>
             <h3 className="inventory__item--name">
-              {props.inventorythings.productname}
+              {inventorythings.productname}
             </h3>
             <h3 className="inventory__item--description">
               {props.inventorythings.productdescription}
@@ -59,6 +60,6 @@ function Inventoryfe(props) {
       <button className="inventory__additem" type="button" />
     </div>
   );
-}
+};
 
 export default Inventoryfe;
