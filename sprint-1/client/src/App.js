@@ -6,6 +6,7 @@ import Inventoryfe from "./components/Inventoryfe";
 import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
+//import Modal from "./Component/Modal";
 
 export default class App extends React.Component {
   state = {
@@ -39,7 +40,7 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <CreateNew />
+                    <Inventoryfe />
                   </>
                 );
               }}
