@@ -1,23 +1,21 @@
 import React from "react";
 import backIcon from "../Assets/Icons/SVG/Icon-back-arrow.svg";
 
-export default function productSummary() {
+export default function productSummary({ product }) {
   return (
     <div className="product">
       <div className="product__header">
         <h1 className="product__header-title">
           <img src={backIcon} alt="back-arrow" />
-          &nbsp;&nbsp;Product Name
+          &nbsp;&nbsp;{product.productname}
         </h1>
-        <span className="product__header-stock">In Stock</span>
+        <span className="product__header-stock">{product.status}</span>
       </div>
       <div className="product__detail">
         <div className="product__left">
           <p className="product__description-title">ITEM DESCRIPTION</p>
           <p className="product__description-description">
-            Here is a more detailed summary of the product name, it’s uses,
-            industries and possible attributes that could be used to describe
-            the product.
+            {product.productdescription}
           </p>
         </div>
         <div className="product__right">
@@ -34,21 +32,21 @@ export default function productSummary() {
           <div className="product__info">
             <div className="product__info-last-order">
               <p className="product__info-last-title">LAST ORDERED</p>
-              <p className="product__info-last-value">5/24/2018</p>
+              <p className="product__info-last-value">{product.lastordered}</p>
             </div>
             <div className="product__info-location">
               <p className="product__info-location-title">LOCATION</p>
-              <p className="product__info-location-value">Toronto, CAN</p>
+              <p className="product__info-location-value">{`${product.city}, ${product.country}`}</p>
             </div>
           </div>
           <div className="product__info-qty">
             <p className="product__info-qty-title">QUANTITY</p>
-            <p className="product__info-qty-value">120000</p>
+            <p className="product__info-qty-value">{product.quantity}</p>
           </div>
           <p className="product__info-category-title">CATEGORIES</p>
           <p className="product__info-category-value">
-            Industrial, Automotive, Heavy, Mechanical, Engineering,
-            Transportation, Sales
+            {product.category}
+            {product.id}
           </p>
         </div>
       </div>

@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
       city: inventoryItem.city,
       country: inventoryItem.country,
       quantity: inventoryItem.quantity,
-      status: inventoryItem.status
+      status: inventoryItem.status,
+      category: inventoryItem.category
     };
   });
   res.json(inventoryList);

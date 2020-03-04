@@ -1,0 +1,6 @@
+.locations {
+  &__header {
+    color: $silver;
+    @include mobileheader;
+  }
+}
