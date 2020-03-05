@@ -1,18 +1,26 @@
 import React from "react";
 import Logo from "../Assets/Logo/Logo-instock.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <header className="header">
       <img className="header__logo" src={Logo} alt="Logo" />
       <nav className="header__nav">
-        <div className="header__nav-inventory">
-          <Link to="/inventory">Inventory</Link>
-        </div>
-        <div className="header__nav-location">
-          <Link to="/locations">Locations</Link>
-        </div>
+        <NavLink
+          to="/inventory"
+          className="header__nav-link"
+          activeClassName="header__nav-link--active"
+        >
+          Inventory
+        </NavLink>
+        <NavLink
+          to="/locations"
+          className="header__nav-link"
+          activeClassName="header__nav-link--active"
+        >
+          Locations
+        </NavLink>
       </nav>
     </header>
   );
