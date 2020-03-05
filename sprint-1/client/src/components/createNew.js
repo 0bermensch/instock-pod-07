@@ -1,54 +1,115 @@
 import React from "react";
 import Select from "react-select";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
-export default function createNew() {
-  return (
-    <form className="modal">
-      <h1 className="modal__title">Create New</h1>
-      <div className="modal__menu">
-        <div className="modal__menu-left">
-          <p className="modal__sub-title">PRODUCT</p>
-          <input type="text" placeholder="Item Name" />
-        </div>
-        <div className="modal__menu-right">
-          <p className="modal__sub-title">LAST ORDERED</p>
-          <input type="text" placeholder="yyyy-mm-dd" />
-        </div>
-      </div>
-      <div className="modal__menu">
-        <div className="modal__menu-left">
-          <p className="modal__sub-title">CITY</p>
-          <input type="text" placeholder="City" />
-        </div>
-        <div className="modal__menu-right">
-          <p className="modal__sub-title">COUNTRY</p>
-          <Select className="modal__select" placeholder="Canada" />
-        </div>
-      </div>
-      <div className="modal__menu">
-        <div className="modal__menu-left">
-          <p className="modal__sub-title">QUANTITY</p>
-          <input type="text" placeholder="0" />
-        </div>
-        <div className="modal__menu-right">
-          <p className="modal__sub-title">STATUS</p>
-          <div className="modal__switch-wrapper">
-            <h4>In stock</h4>
-            <label className="modal__switch">
-              <input type="checkbox" />
-              <span claseName="modal__slider"></span>
-            </label>
+export default class createNew extends React.Component {
+  state = {
+    checked: false,
+    status: "Out of Stock",
+    button: ""
+  };
+
+  handleCheck = () => {
+    if (this.state.checked === false) {
+      this.setState({ status: "In Stock" });
+    } else {
+      this.setState({ status: "Out of Stock" });
+    }
+    this.setState({ checked: !this.state.checked });
+  };
+  buttonClicked = event => {
+    this.setState({ button: event.target.name });
+  };
+  handlePost = event => {
+    event.preventDefault();
+    if (this.state.button === "cancel") {
+      event.target.reset();
+    } else {
+      axios
+        .post("/api/Inventory", {
+          id: uuidv4(),
+          productname: event.target.productName.value,
+          productdescription: event.target.description.value,
+          lastordered: event.target.lastordered.value,
+          city: event.target.city.value,
+          country: "Canada",
+          quantity: event.target.quantity.value,
+          status: this.state.status
+        })
+        .then(response => {
+          window.alert("Successfully added product to inventory");
+          this.props.updateInventory();
+        });
+      event.target.reset();
+    }
+  };
+
+  render() {
+    return (
+      <form className="modal" onSubmit={this.handlePost}>
+        <h1 className="modal__title">Create New</h1>
+        <div className="modal__menu">
+          <div className="modal__menu-left">
+            <p className="modal__sub-title">PRODUCT</p>
+            <input type="text" placeholder="Item Name" name="productName" />
+          </div>
+          <div className="modal__menu-right">
+            <p className="modal__sub-title">LAST ORDERED</p>
+            <input type="text" placeholder="yyyy-mm-dd" name="lastordered" />
           </div>
         </div>
-      </div>
-      <div>
-        <p className="modal__sub-title">ITEM DESCRIPTION</p>
-        <textarea name="" placeholder="(Optional)"></textarea>
-      </div>
-      <div className="modal__btns">
-        <button className="modal__save-btn">SAVE</button>
-        <button className="modal__cancel-btn">CANCEL</button>
-      </div>
-    </form>
-  );
+        <div className="modal__menu">
+          <div className="modal__menu-left">
+            <p className="modal__sub-title">CITY</p>
+            <input type="text" placeholder="City" name="city" />
+          </div>
+          <div className="modal__menu-right">
+            <p className="modal__sub-title">COUNTRY</p>
+            <Select
+              className="modal__select"
+              placeholder="Canada"
+              name="country"
+            />
+          </div>
+        </div>
+        <div className="modal__menu">
+          <div className="modal__menu-left">
+            <p className="modal__sub-title">QUANTITY</p>
+            <input type="text" placeholder="0" name="quantity" />
+          </div>
+          <div className="modal__menu-right">
+            <p className="modal__sub-title">STATUS</p>
+            <div className="modal__switch-wrapper">
+              <h4>{this.state.status}</h4>
+              <label className="switch">
+                <input type="checkbox" onClick={this.handleCheck}></input>
+                <span className="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p className="modal__sub-title">ITEM DESCRIPTION</p>
+          <textarea placeholder="(Optional)" name="description"></textarea>
+        </div>
+        <div className="modal__btns">
+          <button
+            className="modal__save-btn"
+            name="save"
+            onClick={this.buttonClicked}
+          >
+            SAVE
+          </button>
+          <button
+            className="modal__cancel-btn"
+            name="cancel"
+            onClick={this.buttonClicked}
+          >
+            CANCEL
+          </button>
+        </div>
+      </form>
+    );
+  }
 }
