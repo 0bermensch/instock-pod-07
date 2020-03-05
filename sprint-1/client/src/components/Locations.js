@@ -1,8 +1,6 @@
 import React from "react";
 
 const Locations = props => {
-  console.log(props);
-
   return (
     <div className="locations">
       <h1 className="locations__header">Locations</h1>

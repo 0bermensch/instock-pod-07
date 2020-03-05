@@ -12,7 +12,8 @@ export default class App extends React.Component {
   state = {
     locations: [],
     inventory: [],
-    product: {}
+    product: {},
+    locationOptions: []
   };
 
   componentDidMount() {
@@ -27,6 +28,13 @@ export default class App extends React.Component {
       this.setState({ product: response.data[0] });
     });
   }
+  updateInventory = () => {
+    axios.get("/api/Inventory").then(response => {
+      this.setState({ inventory: response.data });
+      // to be changed dynamically.
+      this.setState({ product: response.data[0] });
+    });
+  };
 
   render() {
     return (
@@ -51,6 +59,10 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
+                    <CreateNew
+                      inventory={this.state.inventory}
+                      updateInventory={this.updateInventory}
+                    />
                     <ProductSummary product={this.state.product} />
                   </>
                 );

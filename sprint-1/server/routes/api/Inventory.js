@@ -23,22 +23,25 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const newInventoryItem = {
+    id: req.body.id,
     productname: req.body.productname,
     productdescription: req.body.productdescription,
     lastordered: req.body.lastordered,
     city: req.body.city,
     country: req.body.country,
     quantity: req.body.quantity,
-    status: req.body.status
+    status: req.body.status,
+    category: req.body.category
   };
   if (
-    !newInventoryItem.productname ||
-    !newInventoryItem.productdescription ||
-    !newInventoryItem.lastordered ||
-    !newInventoryItem.city ||
-    !newInventoryItem.country ||
-    !newInventoryItem.quantity ||
-    !newInventoryItem.status
+    newInventoryItem.id === "" ||
+    newInventoryItem.productname === "" ||
+    newInventoryItem.category === "" ||
+    newInventoryItem.lastordered === "" ||
+    newInventoryItem.city === "" ||
+    newInventoryItem.country === "" ||
+    newInventoryItem.quantity === "" ||
+    newInventoryItem.status === ""
   ) {
     return res.status(400).json({
       errorMessage: "please fill in all the blanks"
@@ -48,12 +51,14 @@ router.post("/", (req, res) => {
   helper.writeJSONFile(inventoryFile, inventoryItems);
   res.json(inventoryItems);
 });
+
 //delete inventory item by id
 router.delete("/:id", (req, res) => {
   const newInventory = inventoryItems.filter(item => item.id !== req.params.id);
   helper.writeJSONFile(inventoryFile, newInventory);
   res.json(newInventory);
 });
+
 //get single item by id
 router.get("/:id", (req, res) => {
   const invItem = inventoryItems.filter(item => req.params.id === item.id);
