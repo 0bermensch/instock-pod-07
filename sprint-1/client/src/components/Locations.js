@@ -1,34 +1,28 @@
 import React from "react";
+import LocationsRender from "./LocationsRender";
 
 const Locations = props => {
   return (
-    <div className="locations">
-      <h1 className="locations__header">Locations</h1>
-      <input className="locations__search" type="text" placeholder="Search" />
-      <div className="locations__info">
-        <div className="locations__info-section">
-          <h4 className="locations__location">{props.locations.warehouse}</h4>
-          <p className="locations__address">{props.locations.address}</p>
-        </div>
-        <div className="locations__info-section">
-          <p className="locations__contact-person">
-            {props.locations.contactPerson}
-          </p>
-          <p className="locations__contact-position">
-            {props.locations.contactPosition}
-          </p>
-        </div>
-        <div className="locations__info-section">
-          <p className="locations__contact-number">
-            {props.locations.contactNumber}
-          </p>
-          <p className="locations__contact-email">
-            {props.locations.contactEmail}
-          </p>
-        </div>
-        <p className="locations__categories">{props.locations.categories}</p>
+    <section className="locations">
+      <div className="locations__top">
+        <h1 className="locations__header">Locations</h1>
+        <input className="locations__search" type="text" placeholder="Search" />
       </div>
-    </div>
+      {props.locations.map(location => {
+        return (
+          <LocationsRender
+            id={location.id}
+            warehouse={location.warehouse}
+            address={location.address}
+            contactPerson={location.contactPerson}
+            contactPosition={location.contactPosition}
+            contactNumber={location.contactNumber}
+            contactEmail={location.contactEmail}
+            categories={location.categories}
+          />
+        );
+      })}
+    </section>
   );
 };
 

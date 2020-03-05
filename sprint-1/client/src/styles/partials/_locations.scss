@@ -1,6 +1,78 @@
 .locations {
+  padding: 0 1rem;
+  color: $black;
+  * {
+    margin: 0;
+  }
+
   &__header {
-    color: $silver;
-    @include mobileheader;
+    @include mobile-header;
+    margin: 2rem 0 1rem 0;
+  }
+
+  &__search {
+    background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    height: 3rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    border-radius: 2px;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    @include mobile-paragraph-lists;
+  }
+
+  &__info {
+    @include mobile-paragraph-lists;
+    line-height: 1.25rem;
+    padding: 2rem 0 1.5rem 0;
+    border-bottom: solid $mercury 1.5px;
+  }
+
+  &__info-section {
+    padding-bottom: 1.5rem;
+  }
+
+  &__location {
+    @include mobile-subheader;
+  }
+
+  &__contact-position {
+    font-style: italic;
+  }
+}
+
+@include tablet {
+  .locations {
+    margin: 0 1.5rem;
+
+    &__top {
+      width: 100%;
+      display: flex;
+      height: 3rem;
+      align-items: center;
+      justify-content: space-between;
+      margin: 3rem 0;
+    }
+
+    &__header {
+      @include dt-header-h1;
+      margin: 0;
+    }
+
+    &__search {
+      width: 15.625rem; /*250px*/
+    }
+
+    &__info {
+      padding-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__info-section--1 {
+      width: 100%;
+    }
   }
 }
