@@ -58,10 +58,6 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <CreateNew
-                      inventory={this.state.inventory}
-                      updateInventory={this.updateInventory}
-                    />
                     <ProductSummary product={this.state.product} />
                   </>
                 );

@@ -1,6 +1,4 @@
 .modal {
-  padding: 0 1rem 3rem 1rem;
-
   &__title {
     margin: 2rem 0 2rem 0;
     @include header;
@@ -21,9 +19,14 @@
 
 @include tablet {
   .modal {
-    padding: 0 3rem 3rem 3rem;
     &__title {
       margin: 3.5rem 0 1.5rem 0;
+    }
+    input {
+      width: 13.75rem;
+    }
+    textarea {
+      width: 30rem;
     }
     &__menu {
       display: flex;
