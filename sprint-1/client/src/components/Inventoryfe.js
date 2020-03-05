@@ -3,7 +3,6 @@ import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 import searchicon from "../Assets/Icons/SVG/Icon-search.svg";
 
 const Inventoryfe = props => {
-  //console.log(props.inventoryInfo);
   let inventoryElements = props.inventory.map((inventorythings, index) => {
     return (
       <>
