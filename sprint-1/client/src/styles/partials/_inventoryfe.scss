@@ -6,65 +6,92 @@
   }
   &__head--title {
     margin-top: 32px;
+    margin-bottom: 0;
     font-family: "avenir-bold";
     @include header-m;
     color: $black;
   }
   &__head--search {
     margin-top: 16px;
-    height: 40px;
+    height: 50px;
     width: 90%;
+    margin-bottom: 0;
+    background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    padding-left: 2.5rem;
+    border-radius: 4px;
+    border: 1.5px solid $mercury;
+    background-color: $alabaster;
   }
   &__title {
     display: none;
   }
-  &__maincontent {
+  &__main {
     display: flex;
     flex-direction: row;
     border-bottom: 0.5px solid $silver;
+    margin-bottom: 0;
+  }
+  &__maincontent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
   }
   &__information {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
   &__item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
   &__item--title {
     font-family: "avenir-demi";
     @include lists-m;
     color: $silver;
     margin-top: 32px;
+    margin-bottom: 0;
   }
   &__item--name {
     font-family: "avenir-demi";
     @include lists-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
   }
   &__item--description {
     font-family: "avenir-light";
     @include labels-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
   &__lastorder {
     font-family: "avenir-demi";
     @include lists-m;
     color: $silver;
     margin-top: 24px;
+    margin-bottom: 0;
   }
   &__lastorder--date {
     font-family: "avenir-light";
     @include labels-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
   }
   &__location {
     @include lists-m;
     color: $silver;
     margin-top: 24px;
+    margin-bottom: 0;
   }
   &__location--info {
     display: flex;
@@ -75,34 +102,50 @@
     @include labels-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
   }
   &__location--country {
     font-family: "avenir-light";
     @include labels-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
   }
   &__quantity {
     @include lists-m;
     color: $silver;
     margin-top: 24px;
+    margin-bottom: 0;
   }
   &__quantity--value {
     font-family: "avenir-light";
     @include labels-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
   }
   &__status {
     @include lists-m;
     color: $silver;
     margin-top: 24px;
+    margin-bottom: 0;
   }
   &__status--display {
     font-family: "avenir-light";
     @include labels-m;
     color: $black;
     margin-top: 16px;
+    margin-bottom: 0;
+  }
+  &__remove {
+    width: 10%;
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  &__additem {
+    width: 20%;
+    position: absolute;
   }
 }
 
@@ -111,7 +154,9 @@
     margin: 0 3.125%;
     &__head {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 20px 0;
     }
     &__head--title {
       margin-top: 32px;
@@ -122,16 +167,64 @@
     &__head--search {
       margin-top: 16px;
       height: 40px;
-      width: 90%;
+      width: 34%;
+      background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: 1rem;
+      padding-left: 2.5rem;
+      border-radius: 4px;
+      border: 1.5px solid $mercury;
+      background-color: $alabaster;
     }
     &__title {
       display: flex;
       flex-direction: row;
     }
-    &__maincontent {
+    &__title--item {
+      width: 30%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--lastorder {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--location {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--quantity {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--status {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--space {
+      width: 10%;
+    }
+    &__main {
       display: flex;
       flex-direction: row;
       border-bottom: 1px solid $silver;
+    }
+    &__maincontent {
+      display: flex;
+      flex-direction: column;
       height: 100px;
     }
     &__information {
@@ -162,6 +255,199 @@
       @include labels;
       color: $black;
       margin-top: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    &__lastorder {
+      display: none;
+      font-family: "avenir-demi";
+      @include lists;
+      color: $silver;
+      margin-top: 0;
+    }
+    &__lastorder--date {
+      font-family: "avenir-light";
+      @include labels;
+      color: $black;
+      width: 13.8%;
+      margin-top: 0;
+      margin-left: 3.125%;
+      padding-top: 15px;
+    }
+    &__location {
+      display: none;
+      @include lists;
+      color: $silver;
+      margin-top: 0;
+    }
+    &__location--info {
+      display: flex;
+      flex-direction: row;
+      margin-left: 3.125%;
+      width: 13.8%;
+      padding-top: 15px;
+    }
+    &__location--city {
+      font-family: "avenir-light";
+      @include labels;
+      color: $black;
+      margin-top: 0;
+    }
+    &__location--country {
+      font-family: "avenir-light";
+      @include labels;
+      color: $black;
+      margin-top: 0;
+    }
+    &__quantity {
+      display: none;
+      @include lists;
+      color: $silver;
+      margin-top: 0;
+    }
+    &__quantity--value {
+      font-family: "avenir-light";
+      @include labels;
+      color: $black;
+      width: 13.8%;
+      margin-top: 0;
+      margin-left: 3.125%;
+      padding-top: 15px;
+    }
+    &__status {
+      display: none;
+      @include lists;
+      color: $silver;
+      margin-top: 0;
+    }
+    &__status--display {
+      font-family: "avenir-light";
+      @include labels;
+      color: $black;
+      width: 13.8%;
+      margin-top: 0;
+      margin-left: 3.125%;
+      padding-top: 15px;
+    }
+    &__remove {
+      width: 10%;
+      height: 20px;
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include desk {
+  .inventory {
+    margin: 0 12.5%;
+    &__head {
+      display: flex;
+      flex-direction: row;
+    }
+    &__head--title {
+      margin-top: 32px;
+      font-family: "avenir-bold";
+      @include header-2;
+      color: $black;
+    }
+    &__head--search {
+      margin-top: 16px;
+      height: 40px;
+      width: 30%;
+      background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: 1rem;
+      padding-left: 2.5rem;
+      border-radius: 4px;
+      border: 1.5px solid $mercury;
+      background-color: $alabaster;
+    }
+    &__title {
+      display: flex;
+      flex-direction: row;
+    }
+    &__title--item {
+      width: 28.5%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--lastorder {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--location {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--quantity {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--status {
+      width: 13.8%;
+      margin-left: 3.125%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
+    }
+    &__title--space {
+      width: 10%;
+    }
+    &__main {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid $silver;
+    }
+    &__maincontent {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+    }
+    &__information {
+      display: flex;
+      flex-direction: row;
+      margin: 24px 0;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 28.5%;
+    }
+    &__item--title {
+      display: none;
+      font-family: "avenir-demi";
+      @include lists;
+      color: $silver;
+      margin-top: 0;
+    }
+    &__item--name {
+      font-family: "avenir-demi";
+      @include lists;
+      color: $black;
+      margin-top: 0;
+    }
+    &__item--description {
+      font-family: "avenir-light";
+      @include labels;
+      color: $black;
+      margin-top: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
     &__lastorder {
       display: none;
