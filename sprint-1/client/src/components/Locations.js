@@ -8,6 +8,12 @@ const Locations = props => {
         <h1 className="locations__header">Locations</h1>
         <input className="locations__search" type="text" placeholder="Search" />
       </div>
+      <div className="locations__labels">
+        <h4>warehouse</h4>
+        <h4>contact</h4>
+        <h4>contact information</h4>
+        <h4>categories</h4>
+      </div>
       {props.locations.map(location => {
         return (
           <LocationsRender

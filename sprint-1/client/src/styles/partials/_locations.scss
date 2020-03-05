@@ -26,7 +26,7 @@
   &__info {
     @include mobile-paragraph-lists;
     line-height: 1.25rem;
-    padding: 2rem 0 1.5rem 0;
+    margin: 2rem 0 1.5rem 0;
     border-bottom: solid $mercury 1.5px;
   }
 
@@ -65,14 +65,31 @@
       width: 15.625rem; /*250px*/
     }
 
-    &__info {
-      padding-bottom: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
     &__info-section--1 {
       width: 100%;
+      padding-bottom: 2rem;
+    }
+
+    &__info {
+      @include dt-paragraph;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__info-section--bottom {
+      width: 30%;
+    }
+  }
+}
+
+@include desk {
+  .locations {
+    padding: 0 11.25rem; /*180px*/
+
+    &__labels {
+      width: 100%;
+      display: flex;
     }
   }
 }
