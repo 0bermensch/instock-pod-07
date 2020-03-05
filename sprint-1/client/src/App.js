@@ -6,27 +6,31 @@ import Inventoryfe from "./components/Inventoryfe";
 import CreateNew from "./components/createNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
-//import Modal from "./Component/Modal";
 
 export default class App extends React.Component {
   state = {
     locations: [],
     inventory: [],
-    product: {}
+    product: {},
+    locationOptions: []
   };
 
   componentDidMount() {
     axios.get("api/locations").then(response => {
       this.setState({
-        locations: response.data[0]
+        locations: response.data
       });
     });
+    this.updateInventory();
+  }
+
+  updateInventory = () => {
     axios.get("/api/Inventory").then(response => {
       this.setState({ inventory: response.data });
       // to be changed dynamically.
       this.setState({ product: response.data[0] });
     });
-  }
+  };
 
   render() {
     return (
@@ -51,6 +55,10 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
+                    <CreateNew
+                      inventory={this.state.inventory}
+                      updateInventory={this.updateInventory}
+                    />
                     <ProductSummary product={this.state.product} />
                   </>
                 );

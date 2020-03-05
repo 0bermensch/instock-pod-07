@@ -6,6 +6,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
   const locationsList = locations.map(location => {
     return {
+      id: location.id,
       warehouse: location.warehouse,
       address: location.address,
       contactPerson: location.contactPerson,
