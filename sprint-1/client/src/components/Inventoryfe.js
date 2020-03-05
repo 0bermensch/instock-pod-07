@@ -61,6 +61,7 @@ class Inventoryfe extends React.Component {
     );
     return (
       <>
+
         <div className="inventory">
           <div className="inventory__head">
             <h2 className="inventory__head--title">Inventory</h2>
@@ -91,5 +92,6 @@ class Inventoryfe extends React.Component {
     );
   }
 }
+
 
 export default Inventoryfe;
