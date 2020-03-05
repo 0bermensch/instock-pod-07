@@ -42,3 +42,9 @@
     font-style: italic;
   }
 }
+
+@include tablet {
+  .locations {
+    margin: 0 1.5rem;
+  }
+}
