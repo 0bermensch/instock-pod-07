@@ -78,6 +78,7 @@ class Inventoryfe extends React.Component {
             <h2 className="inventory__title--location">LOCATION</h2>
             <h2 className="inventory__title--quantity">QUANTITY</h2>
             <h2 className="inventory__title--status">STATUS</h2>
+            <h2 className="inventory__title--space"></h2>
           </div>
           <div className="inventory__maincontent">{inventoryElements}</div>
           <button
