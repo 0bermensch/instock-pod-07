@@ -23,25 +23,46 @@ export default class createNew extends React.Component {
   };
   handlePost = event => {
     event.preventDefault();
-    if (this.state.button === "cancel") {
-      event.target.reset();
+
+    const productName = event.target.productName.value;
+    const description = event.target.description.value;
+    const lastordered = event.target.lastordered.value;
+    const city = event.target.city.value;
+    const country = "Canada";
+    const quantity = event.target.quantity.value;
+    const status = this.state.status;
+
+    if (
+      productName !== "" &&
+      description !== "" &&
+      lastordered !== "" &&
+      city !== "" &&
+      country !== "" &&
+      quantity !== "" &&
+      status !== ""
+    ) {
+      if (this.state.button === "cancel") {
+        event.target.reset();
+      } else {
+        axios
+          .post("/api/Inventory", {
+            id: uuidv4(),
+            productname: productName,
+            productdescription: description,
+            lastordered: lastordered,
+            city: city,
+            country: country,
+            quantity: quantity,
+            status: status
+          })
+          .then(response => {
+            window.alert("Successfully added product to inventory");
+            this.props.updateInventory();
+          });
+        event.target.reset();
+      }
     } else {
-      axios
-        .post("/api/Inventory", {
-          id: uuidv4(),
-          productname: event.target.productName.value,
-          productdescription: event.target.description.value,
-          lastordered: event.target.lastordered.value,
-          city: event.target.city.value,
-          country: "Canada",
-          quantity: event.target.quantity.value,
-          status: this.state.status
-        })
-        .then(response => {
-          window.alert("Successfully added product to inventory");
-          this.props.updateInventory();
-        });
-      event.target.reset();
+      window.alert("please fill all the fields");
     }
   };
 
