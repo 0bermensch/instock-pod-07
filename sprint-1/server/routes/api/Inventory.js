@@ -33,20 +33,6 @@ router.post("/", (req, res) => {
     status: req.body.status,
     category: req.body.category
   };
-  if (
-    newInventoryItem.id === "" ||
-    newInventoryItem.productname === "" ||
-    newInventoryItem.category === "" ||
-    newInventoryItem.lastordered === "" ||
-    newInventoryItem.city === "" ||
-    newInventoryItem.country === "" ||
-    newInventoryItem.quantity === "" ||
-    newInventoryItem.status === ""
-  ) {
-    return res.status(400).json({
-      errorMessage: "please fill in all the blanks"
-    });
-  }
   inventoryItems.push(newInventoryItem);
   helper.writeJSONFile(inventoryFile, inventoryItems);
   res.json(inventoryItems);
