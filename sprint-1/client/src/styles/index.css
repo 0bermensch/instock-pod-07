@@ -1209,6 +1209,7 @@ a {
   .inventory__additem {
     width: 80px;
     height: 80px;
+    background-position: 1.1rem;
   }
 }
 
