@@ -23,11 +23,25 @@
     @include mobile-paragraph-lists;
   }
 
+  &__labels {
+    display: none;
+  }
+
   &__info {
     @include mobile-paragraph-lists;
     line-height: 1.25rem;
     margin: 2rem 0 1.5rem 0;
     border-bottom: solid $mercury 1.5px;
+  }
+
+  &__arrow-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__arrow {
+    padding-right: 0.5rem;
   }
 
   &__info-section {
@@ -40,6 +54,26 @@
 
   &__contact-position {
     font-style: italic;
+  }
+
+  &__dt-arrow {
+    display: none;
+  }
+
+  &__circle {
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    background-color: $instock-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0.5rem;
+    right: 1.5rem;
+  }
+  &__plus {
+    height: 1.25rem;
   }
 }
 
@@ -80,6 +114,11 @@
     &__info-section--bottom {
       width: 30%;
     }
+
+    &__circle {
+      bottom: 5rem;
+      right: 5rem;
+    }
   }
 }
 
@@ -87,9 +126,40 @@
   .locations {
     padding: 0 11.25rem; /*180px*/
 
+    &__arrow-container {
+      display: none;
+    }
+
+    &__dt-arrow {
+      display: inline;
+      padding-right: 1rem;
+    }
+
+    &__info-section--1 {
+      width: 25%;
+    }
+
+    &__info-section--bottom {
+      width: 25%;
+    }
+
+    &__dt-arrow-container {
+      display: flex;
+    }
+
     &__labels {
       width: 100%;
       display: flex;
+    }
+
+    &__label {
+      width: 30%;
+      @include labels1;
+      color: $silver;
+    }
+
+    &__circle {
+      right: 15rem;
     }
   }
 }

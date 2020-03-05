@@ -1,5 +1,6 @@
 import React from "react";
 import LocationsRender from "./LocationsRender";
+import Plus from "../Assets/Icons/SVG/Icon-add.svg";
 
 const Locations = props => {
   return (
@@ -9,10 +10,10 @@ const Locations = props => {
         <input className="locations__search" type="text" placeholder="Search" />
       </div>
       <div className="locations__labels">
-        <h4>warehouse</h4>
-        <h4>contact</h4>
-        <h4>contact information</h4>
-        <h4>categories</h4>
+        <h4 className="locations__label">warehouse</h4>
+        <h4 className="locations__label">contact</h4>
+        <h4 className="locations__label">contact information</h4>
+        <h4 className="locations__label">categories</h4>
       </div>
       {props.locations.map(location => {
         return (
@@ -28,6 +29,9 @@ const Locations = props => {
           />
         );
       })}
+      <div className="locations__circle">
+        <img className="locations__plus" src={Plus} />
+      </div>
     </section>
   );
 };
