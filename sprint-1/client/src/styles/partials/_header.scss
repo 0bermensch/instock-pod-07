@@ -18,15 +18,17 @@ a {
     align-items: center;
     @include lists-m;
     font-family: "avenir-demi";
-    &-inventory {
-      flex: 0.5;
+    &-link {
       padding-bottom: 0.8rem;
+      width: 50%;
+    }
+    &-link--active {
       border-bottom: 4px solid $white;
     }
-    &-location {
-      padding-bottom: 0.8rem;
-      flex: 0.5;
-    }
+  }
+  &-location {
+    padding-bottom: 0.8rem;
+    flex: 0.5;
   }
 }
 
@@ -43,11 +45,7 @@ a {
       justify-content: flex-start;
       align-items: center;
 
-      &-inventory {
-        padding: 2rem 0 1.6rem 0;
-        margin: 0 1rem 0 1rem;
-      }
-      &-location {
+      &-link {
         padding: 2rem 0 1.6rem 0;
         margin: 0 1rem 0 1rem;
       }

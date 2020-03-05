@@ -6,8 +6,10 @@ const Locations = props => {
 
   return (
     <section className="locations">
-      <h1 className="locations__header">Locations</h1>
-      <input className="locations__search" type="text" placeholder="Search" />
+      <div className="locations__top">
+        <h1 className="locations__header">Locations</h1>
+        <input className="locations__search" type="text" placeholder="Search" />
+      </div>
       {props.locations.map(location => {
         return (
           <LocationsRender
