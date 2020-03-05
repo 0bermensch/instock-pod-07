@@ -44,7 +44,10 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <Inventoryfe inventory={this.state.inventory} />
+                    <Inventoryfe
+                      inventory={this.state.inventory}
+                      updateInventory={this.updateInventory}
+                    />
                   </>
                 );
               }}
@@ -70,7 +73,10 @@ export default class App extends React.Component {
                 return (
                   <>
                     <Header />
-                    <Inventoryfe inventory={this.state.inventory} />
+                    <Inventoryfe
+                      inventory={this.state.inventory}
+                      updateInventory={this.updateInventory}
+                    />
                   </>
                 );
               }}

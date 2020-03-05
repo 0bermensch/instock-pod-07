@@ -18,32 +18,31 @@ export default class createNew extends React.Component {
     }
     this.setState({ checked: !this.state.checked });
   };
+
   buttonClicked = event => {
     this.setState({ button: event.target.name });
   };
+
   handlePost = event => {
     event.preventDefault();
+    console.log(this.state.button);
 
-    const productName = event.target.productName.value;
-    const description = event.target.description.value;
-    const lastordered = event.target.lastordered.value;
-    const city = event.target.city.value;
-    const country = "Canada";
-    const quantity = event.target.quantity.value;
-    const status = this.state.status;
-
-    if (
-      productName !== "" &&
-      description !== "" &&
-      lastordered !== "" &&
-      city !== "" &&
-      country !== "" &&
-      quantity !== "" &&
-      status !== ""
-    ) {
-      if (this.state.button === "cancel") {
-        event.target.reset();
-      } else {
+    if (this.state.button === "save") {
+      const productName = event.target.productName.value;
+      const description = event.target.description.value;
+      const lastordered = event.target.lastordered.value;
+      const city = event.target.city.value;
+      const country = "Canada";
+      const quantity = event.target.quantity.value;
+      const status = this.state.status;
+      if (
+        productName !== "" &&
+        lastordered !== "" &&
+        city !== "" &&
+        country !== "" &&
+        quantity !== "" &&
+        status !== ""
+      )
         axios
           .post("/api/Inventory", {
             id: uuidv4(),
@@ -59,11 +58,10 @@ export default class createNew extends React.Component {
             window.alert("Successfully added product to inventory");
             this.props.updateInventory();
           });
-        event.target.reset();
-      }
     } else {
-      window.alert("please fill all the fields");
+      event.target.reset();
     }
+    event.target.reset();
   };
 
   render() {
@@ -125,7 +123,7 @@ export default class createNew extends React.Component {
           <button
             className="modal__cancel-btn"
             name="cancel"
-            onClick={this.buttonClicked}
+            onClick={this.props.close}
           >
             CANCEL
           </button>

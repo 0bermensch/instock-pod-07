@@ -3,10 +3,6 @@ import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 import CreateNew from "../components/createNew";
 import Modal from "react-responsive-modal";
 
-<<<<<<< HEAD
-const Inventoryfe = props => {
-  let inventoryElements = props.inventory.map((inventorythings, index) => {
-=======
 class Inventoryfe extends React.Component {
   state = {
     inentoryElements: [],
@@ -63,10 +59,8 @@ class Inventoryfe extends React.Component {
         );
       }
     );
->>>>>>> f1bcc82888a5b2fb99c173f181c6bd08f8c4e28a
     return (
       <>
-
         <div className="inventory">
           <div className="inventory__head">
             <h2 className="inventory__head--title">Inventory</h2>
@@ -90,13 +84,15 @@ class Inventoryfe extends React.Component {
             onClick={this.onOpenModal}
           />
         </div>
-        <Modal open={this.state.open} onClose={this.onCloseModal}>
-          <CreateNew />
+        <Modal open={open} onClose={this.onCloseModal}>
+          <CreateNew
+            updateInventory={this.props.updateInventory}
+            close={this.onCloseModal}
+          />
         </Modal>
       </>
     );
   }
 }
-
 
 export default Inventoryfe;
