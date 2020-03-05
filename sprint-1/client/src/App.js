@@ -17,7 +17,7 @@ export default class App extends React.Component {
   componentDidMount() {
     axios.get("api/locations").then(response => {
       this.setState({
-        locations: response.data[0]
+        locations: response.data
       });
     });
     axios.get("api/Inventory").then(response => {

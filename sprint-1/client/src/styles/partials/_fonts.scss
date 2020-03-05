@@ -32,13 +32,13 @@
 @mixin mobile-header {
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */
-  font-family: "avenir-next-bold";
+  font-family: "avenir-bold";
 }
 
 @mixin mobile-subheader {
   font-size: 0.875rem; /* 14px */
   line-height: 1.375rem; /* 22px */
-  font-family: "avenir-next-demi";
+  font-family: "avenir-demi";
 }
 
 @mixin mobile-paragraph-lists {
@@ -50,7 +50,7 @@
   //same size for mobile and desktop
   font-size: 0.75rem; /* 12px */
   line-height: 1.25rem; /* 20px */
-  font-family: "avenir-next-demi";
+  font-family: "avenir-demi";
   text-transform: uppercase;
 }
 
@@ -59,25 +59,25 @@
 @mixin dt-hero-header {
   font-size: 3.75rem; /* 60px */
   line-height: 4.25rem; /* 68px */
-  font-family: "avenir-next-bold";
+  font-family: "avenir-bold";
 }
 
 @mixin dt-header-h1 {
   font-size: 2.25rem; /* 36px */
   line-height: 2.75rem; /* 44px */
-  font-family: "avenir-next-bold";
+  font-family: "avenir-bold";
 }
 
 @mixin dt-header-h2 {
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */
-  font-family: "avenir-next-bold";
+  font-family: "avenir-bold";
 }
 
 @mixin dt-subheader {
   font-size: 1rem; /* 16px */
   line-height: 1.5rem; /* 24px */
-  font-family: "avenir-next-demi";
+  font-family: "avenir-demi";
 }
 
 @mixin dt-paragraph {
