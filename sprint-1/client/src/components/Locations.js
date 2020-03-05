@@ -2,8 +2,6 @@ import React from "react";
 import LocationsRender from "./LocationsRender";
 
 const Locations = props => {
-  console.log(props);
-
   return (
     <section className="locations">
       <div className="locations__top">
