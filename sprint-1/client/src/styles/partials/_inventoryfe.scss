@@ -144,8 +144,14 @@
     margin-bottom: 0;
   }
   &__additem {
-    width: 20%;
+    width: 60px;
+    height: 60px;
     position: absolute;
+    margin-left: 70%;
+    border-radius: 50%;
+    background-image: url("../Assets/Icons/SVG/Icon-add.svg");
+    background-repeat: no-repeat;
+    background-position: 1.1rem;
   }
 }
 
@@ -346,17 +352,18 @@
     &__head {
       display: flex;
       flex-direction: row;
+      margin: 48px 0;
     }
     &__head--title {
-      margin-top: 32px;
+      margin: 0;
       font-family: "avenir-bold";
-      @include header-2;
+      @include header;
       color: $black;
     }
     &__head--search {
-      margin-top: 16px;
-      height: 40px;
-      width: 30%;
+      margin-top: 0;
+      height: 48px;
+      width: 23.5%;
       background-image: url("../Assets/Icons/SVG/Icon-search.svg");
       background-repeat: no-repeat;
       background-position: 1rem;
@@ -368,37 +375,39 @@
     &__title {
       display: flex;
       flex-direction: row;
+      margin-bottom: 8px;
     }
     &__title--item {
-      width: 28.5%;
+      width: 30.8%;
+      margin: 0;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
     }
     &__title--lastorder {
-      width: 13.8%;
-      margin-left: 3.125%;
+      width: 10%;
+      margin: 0;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
     }
     &__title--location {
-      width: 13.8%;
-      margin-left: 3.125%;
+      width: 10%;
+      margin: 0 0 0 5.2%;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
     }
     &__title--quantity {
-      width: 13.8%;
-      margin-left: 3.125%;
+      width: 10%;
+      margin: 0 0 0 5.2%;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
     }
     &__title--status {
-      width: 13.8%;
-      margin-left: 3.125%;
+      width: 10%;
+      margin: 0 0 0 5.2%;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
@@ -424,7 +433,7 @@
     &__item {
       display: flex;
       flex-direction: column;
-      width: 28.5%;
+      width: 31.185%;
     }
     &__item--title {
       display: none;
