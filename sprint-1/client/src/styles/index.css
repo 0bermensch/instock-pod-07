@@ -492,6 +492,7 @@ a {
 
 .inventory__head--title {
   margin-top: 32px;
+  margin-bottom: 0;
   font-family: "avenir-bold";
   font-size: 24px;
   line-height: 32px;
@@ -500,15 +501,23 @@ a {
 
 .inventory__head--search {
   margin-top: 16px;
-  height: 40px;
+  height: 50px;
   width: 90%;
+  margin-bottom: 0;
+  background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  padding-left: 2.5rem;
+  border-radius: 4px;
+  border: 1.5px solid #e1e1e1;
+  background-color: #fafafa;
 }
 
 .inventory__title {
   display: none;
 }
 
-.inventory__maincontent {
+.inventory__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,6 +526,18 @@ a {
       -ms-flex-direction: row;
           flex-direction: row;
   border-bottom: 0.5px solid #afafaf;
+  margin-bottom: 0;
+}
+
+.inventory__maincontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
 }
 
 .inventory__information {
@@ -527,6 +548,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 0;
 }
 
 .inventory__item {
@@ -537,6 +559,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 0;
 }
 
 .inventory__item--title {
@@ -545,6 +568,7 @@ a {
   line-height: 18px;
   color: #afafaf;
   margin-top: 32px;
+  margin-bottom: 0;
 }
 
 .inventory__item--name {
@@ -553,6 +577,7 @@ a {
   line-height: 18px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .inventory__item--description {
@@ -561,6 +586,11 @@ a {
   line-height: 20px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .inventory__lastorder {
@@ -569,6 +599,7 @@ a {
   line-height: 18px;
   color: #afafaf;
   margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .inventory__lastorder--date {
@@ -577,6 +608,7 @@ a {
   line-height: 20px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .inventory__location {
@@ -584,6 +616,7 @@ a {
   line-height: 18px;
   color: #afafaf;
   margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .inventory__location--info {
@@ -602,6 +635,7 @@ a {
   line-height: 20px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .inventory__location--country {
@@ -610,6 +644,7 @@ a {
   line-height: 20px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .inventory__quantity {
@@ -617,6 +652,7 @@ a {
   line-height: 18px;
   color: #afafaf;
   margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .inventory__quantity--value {
@@ -625,6 +661,7 @@ a {
   line-height: 20px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .inventory__status {
@@ -632,6 +669,7 @@ a {
   line-height: 18px;
   color: #afafaf;
   margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .inventory__status--display {
@@ -640,6 +678,19 @@ a {
   line-height: 20px;
   color: #323232;
   margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.inventory__remove {
+  width: 10%;
+  height: 20px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.inventory__additem {
+  width: 20%;
+  position: absolute;
 }
 
 @media only screen and (min-width: 768px) {
@@ -650,10 +701,14 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px 0;
   }
   .inventory__head--title {
     margin-top: 32px;
@@ -665,7 +720,14 @@ a {
   .inventory__head--search {
     margin-top: 16px;
     height: 40px;
-    width: 90%;
+    width: 34%;
+    background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    padding-left: 2.5rem;
+    border-radius: 4px;
+    border: 1.5px solid #e1e1e1;
+    background-color: #fafafa;
   }
   .inventory__title {
     display: -webkit-box;
@@ -676,7 +738,49 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .inventory__maincontent {
+  .inventory__title--item {
+    width: 30%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--lastorder {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--location {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--quantity {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--status {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--space {
+    width: 10%;
+  }
+  .inventory__main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -685,6 +789,15 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     border-bottom: 1px solid #afafaf;
+  }
+  .inventory__maincontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100px;
   }
   .inventory__information {
@@ -728,6 +841,252 @@ a {
     line-height: 20px;
     color: #323232;
     margin-top: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .inventory__lastorder {
+    display: none;
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__lastorder--date {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    width: 13.8%;
+    margin-top: 0;
+    margin-left: 3.125%;
+    padding-top: 15px;
+  }
+  .inventory__location {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__location--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 3.125%;
+    width: 13.8%;
+    padding-top: 15px;
+  }
+  .inventory__location--city {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__location--country {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__quantity {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__quantity--value {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    width: 13.8%;
+    margin-top: 0;
+    margin-left: 3.125%;
+    padding-top: 15px;
+  }
+  .inventory__status {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__status--display {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    width: 13.8%;
+    margin-top: 0;
+    margin-left: 3.125%;
+    padding-top: 15px;
+  }
+  .inventory__remove {
+    width: 10%;
+    height: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .inventory {
+    margin: 0 12.5%;
+  }
+  .inventory__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .inventory__head--title {
+    margin-top: 32px;
+    font-family: "avenir-bold";
+    font-size: 24px;
+    line-height: 32px;
+    color: #323232;
+  }
+  .inventory__head--search {
+    margin-top: 16px;
+    height: 40px;
+    width: 30%;
+    background-image: url("../Assets/Icons/SVG/Icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    padding-left: 2.5rem;
+    border-radius: 4px;
+    border: 1.5px solid #e1e1e1;
+    background-color: #fafafa;
+  }
+  .inventory__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .inventory__title--item {
+    width: 28.5%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--lastorder {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--location {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--quantity {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--status {
+    width: 13.8%;
+    margin-left: 3.125%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .inventory__title--space {
+    width: 10%;
+  }
+  .inventory__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-bottom: 1px solid #afafaf;
+  }
+  .inventory__maincontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100px;
+  }
+  .inventory__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 24px 0;
+  }
+  .inventory__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 28.5%;
+  }
+  .inventory__item--title {
+    display: none;
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__item--name {
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__item--description {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
   .inventory__lastorder {
     display: none;
