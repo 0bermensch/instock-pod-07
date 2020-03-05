@@ -476,6 +476,7 @@ a {
   }
 }
 
+<<<<<<< HEAD
 .locations {
   padding: 0 1rem;
   color: #323232;
@@ -534,6 +535,342 @@ a {
 
 .locations__contact-position {
   font-style: italic;
+=======
+.inventory {
+  margin: 0 5%;
+}
+
+.inventory__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inventory__head--title {
+  margin-top: 32px;
+  font-family: "avenir-bold";
+  font-size: 24px;
+  line-height: 32px;
+  color: #323232;
+}
+
+.inventory__head--search {
+  margin-top: 16px;
+  height: 40px;
+  width: 90%;
+}
+
+.inventory__title {
+  display: none;
+}
+
+.inventory__maincontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 0.5px solid #afafaf;
+}
+
+.inventory__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inventory__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inventory__item--title {
+  font-family: "avenir-demi";
+  font-size: 13px;
+  line-height: 18px;
+  color: #afafaf;
+  margin-top: 32px;
+}
+
+.inventory__item--name {
+  font-family: "avenir-demi";
+  font-size: 13px;
+  line-height: 18px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+.inventory__item--description {
+  font-family: "avenir-light";
+  font-size: 12px;
+  line-height: 20px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+.inventory__lastorder {
+  font-family: "avenir-demi";
+  font-size: 13px;
+  line-height: 18px;
+  color: #afafaf;
+  margin-top: 24px;
+}
+
+.inventory__lastorder--date {
+  font-family: "avenir-light";
+  font-size: 12px;
+  line-height: 20px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+.inventory__location {
+  font-size: 13px;
+  line-height: 18px;
+  color: #afafaf;
+  margin-top: 24px;
+}
+
+.inventory__location--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.inventory__location--city {
+  font-family: "avenir-light";
+  font-size: 12px;
+  line-height: 20px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+.inventory__location--country {
+  font-family: "avenir-light";
+  font-size: 12px;
+  line-height: 20px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+.inventory__quantity {
+  font-size: 13px;
+  line-height: 18px;
+  color: #afafaf;
+  margin-top: 24px;
+}
+
+.inventory__quantity--value {
+  font-family: "avenir-light";
+  font-size: 12px;
+  line-height: 20px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+.inventory__status {
+  font-size: 13px;
+  line-height: 18px;
+  color: #afafaf;
+  margin-top: 24px;
+}
+
+.inventory__status--display {
+  font-family: "avenir-light";
+  font-size: 12px;
+  line-height: 20px;
+  color: #323232;
+  margin-top: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .inventory {
+    margin: 0 3.125%;
+  }
+  .inventory__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inventory__head--title {
+    margin-top: 32px;
+    font-family: "avenir-bold";
+    font-size: 24px;
+    line-height: 32px;
+    color: #323232;
+  }
+  .inventory__head--search {
+    margin-top: 16px;
+    height: 40px;
+    width: 90%;
+  }
+  .inventory__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .inventory__maincontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-bottom: 1px solid #afafaf;
+    height: 100px;
+  }
+  .inventory__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 24px 0;
+  }
+  .inventory__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+  }
+  .inventory__item--title {
+    display: none;
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__item--name {
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__item--description {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__lastorder {
+    display: none;
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__lastorder--date {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    width: 13.8%;
+    margin-top: 0;
+    margin-left: 3.125%;
+  }
+  .inventory__location {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__location--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 3.125%;
+    width: 13.8%;
+  }
+  .inventory__location--city {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__location--country {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    margin-top: 0;
+  }
+  .inventory__quantity {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__quantity--value {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    width: 13.8%;
+    margin-top: 0;
+    margin-left: 3.125%;
+  }
+  .inventory__status {
+    display: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
+  }
+  .inventory__status--display {
+    font-family: "avenir-light";
+    font-size: 12px;
+    line-height: 20px;
+    color: #323232;
+    width: 13.8%;
+    margin-top: 0;
+    margin-left: 3.125%;
+  }
+>>>>>>> master
 }
 
 body {
