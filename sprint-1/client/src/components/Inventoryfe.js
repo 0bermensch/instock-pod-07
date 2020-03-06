@@ -55,7 +55,11 @@ class Inventoryfe extends React.Component {
                   {inventorythings.status}
                 </h3>
               </div>
-              <img className="inventory__remove" src={removebutton} />
+              <img
+                className="inventory__remove"
+                src={removebutton}
+                alt="removebtn"
+              />
             </div>
           </>
         );
@@ -89,8 +93,12 @@ class Inventoryfe extends React.Component {
             onClick={this.onOpenModal}
           />
         </div>
-        <Modal open={this.state.open} onClose={this.onCloseModal}>
-          <CreateNew />
+        <Modal open={open} onClose={this.onCloseModal}>
+          <CreateNew
+            inventory={this.props.inventory}
+            updateInventory={this.props.updateInventory}
+            close={this.onCloseModal}
+          />
         </Modal>
       </>
     );
