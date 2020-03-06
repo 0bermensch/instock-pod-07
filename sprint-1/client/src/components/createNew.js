@@ -49,7 +49,7 @@ export default class createNew extends React.Component {
     this.setState({ checked: !this.state.checked });
   };
 
-  // it sets the state 'button' to clicked button name
+  // it sets the state 'button' to button name which clicked
   // for deciding which button on the modal is clicked ( cancel or save )
   buttonClicked = event => {
     this.setState({ button: event.target.name });

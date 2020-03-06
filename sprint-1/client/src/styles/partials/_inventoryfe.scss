@@ -111,6 +111,7 @@
     color: $black;
     margin-top: 16px;
     margin-bottom: 0;
+    margin-left: 0.3rem;
   }
   &__quantity {
     @include lists-m;
@@ -147,8 +148,9 @@
   &__additem {
     width: 60px;
     height: 60px;
-    position: absolute;
-    margin-left: 70%;
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
     border-radius: 50%;
     background-image: url("../Assets/Icons/SVG/Icon-add.svg");
     background-repeat: no-repeat;
@@ -183,40 +185,31 @@
       border: 1.5px solid $mercury;
       background-color: $alabaster;
     }
+    &__main {
+      padding-bottom: 0;
+    }
+    &__top {
+      display: flex;
+      flex-direction: row;
+    }
     &__title {
+      width: 90%;
       display: flex;
       flex-direction: row;
     }
     &__title--item {
-      width: 30%;
+      width: 36%;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
+      margin: 0;
     }
-    &__title--lastorder {
-      width: 13.8%;
-      margin-left: 3.125%;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
-    }
-    &__title--location {
-      width: 13.8%;
-      margin-left: 3.125%;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
-    }
-    &__title--quantity {
-      width: 13.8%;
-      margin-left: 3.125%;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
-    }
+    &__title--lastorder,
+    &__title--location,
+    &__title--quantity,
     &__title--status {
-      width: 13.8%;
-      margin-left: 3.125%;
+      width: 18%;
+      margin: 0 0 0 3.125%;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
@@ -238,18 +231,24 @@
       display: flex;
       flex-direction: row;
       margin: 24px 0;
+      width: 90%;
+      justify-content: space-between;
     }
-    &__item {
-      display: flex;
-      flex-direction: column;
-      width: 30%;
-    }
-    &__item--title {
+    &__item--title,
+    &__lastorder,
+    &__location,
+    &__quantity,
+    &__status {
       display: none;
       font-family: "avenir-demi";
       @include lists;
       color: $silver;
       margin-top: 0;
+    }
+    &__item {
+      width: 36%;
+      display: flex;
+      flex-direction: column;
     }
     &__item--name {
       font-family: "avenir-demi";
@@ -267,82 +266,34 @@
       -webkit-line-clamp: 2;
       overflow: hidden;
     }
-    &__lastorder {
-      display: none;
-      font-family: "avenir-demi";
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__lastorder--date {
+    &__lastorder--date,
+    &__location--info,
+    &__quantity--value,
+    &__status--display {
       font-family: "avenir-light";
       @include labels;
       color: $black;
-      width: 13.8%;
-      margin-top: 0;
-      margin-left: 3.125%;
+      width: 18%;
+      margin: 0 0 0 3.125%;
       padding-top: 15px;
     }
-    &__location {
-      display: none;
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__location--info {
-      display: flex;
-      flex-direction: row;
-      margin-left: 3.125%;
-      width: 13.8%;
-      padding-top: 15px;
-    }
-    &__location--city {
-      font-family: "avenir-light";
-      @include labels;
-      color: $black;
-      margin-top: 0;
-    }
+    &__location--city,
     &__location--country {
       font-family: "avenir-light";
       @include labels;
       color: $black;
       margin-top: 0;
     }
-    &__quantity {
-      display: none;
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__quantity--value {
-      font-family: "avenir-light";
-      @include labels;
-      color: $black;
-      width: 13.8%;
-      margin-top: 0;
-      margin-left: 3.125%;
-      padding-top: 15px;
-    }
-    &__status {
-      display: none;
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__status--display {
-      font-family: "avenir-light";
-      @include labels;
-      color: $black;
-      width: 13.8%;
-      margin-top: 0;
-      margin-left: 3.125%;
-      padding-top: 15px;
-    }
-    &__remove {
-      width: 10%;
-      height: 20px;
-      margin-top: 40px;
-      margin-bottom: 0;
+    &__additem {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      border-radius: 50%;
+      background-image: url("../Assets/Icons/SVG/Icon-add.svg");
+      background-repeat: no-repeat;
+      background-position: 1.1rem;
     }
   }
 }
@@ -373,42 +324,31 @@
       border: 1.5px solid $mercury;
       background-color: $alabaster;
     }
-    &__title {
+    &__main {
+      padding-bottom: 0;
+    }
+    &__top {
       display: flex;
       flex-direction: row;
-      margin-bottom: 8px;
+    }
+    &__title {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
     }
     &__title--item {
-      width: 30.8%;
+      width: 36%;
+      font-family: "avenir-demi";
+      @include labels;
+      color: $silver;
       margin: 0;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
     }
-    &__title--lastorder {
-      width: 10%;
-      margin: 0;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
-    }
-    &__title--location {
-      width: 10%;
-      margin: 0 0 0 5.2%;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
-    }
-    &__title--quantity {
-      width: 10%;
-      margin: 0 0 0 5.2%;
-      font-family: "avenir-demi";
-      @include labels;
-      color: $silver;
-    }
+    &__title--lastorder,
+    &__title--location,
+    &__title--quantity,
     &__title--status {
-      width: 10%;
-      margin: 0 0 0 5.2%;
+      width: 18%;
+      margin: 0 0 0 3.125%;
       font-family: "avenir-demi";
       @include labels;
       color: $silver;
@@ -430,18 +370,24 @@
       display: flex;
       flex-direction: row;
       margin: 24px 0;
+      width: 90%;
+      justify-content: space-between;
     }
-    &__item {
-      display: flex;
-      flex-direction: column;
-      width: 31.185%;
-    }
-    &__item--title {
+    &__item--title,
+    &__lastorder,
+    &__location,
+    &__quantity,
+    &__status {
       display: none;
       font-family: "avenir-demi";
       @include lists;
       color: $silver;
       margin-top: 0;
+    }
+    &__item {
+      width: 36%;
+      display: flex;
+      flex-direction: column;
     }
     &__item--name {
       font-family: "avenir-demi";
@@ -459,76 +405,35 @@
       -webkit-line-clamp: 2;
       overflow: hidden;
     }
-    &__lastorder {
-      display: none;
-      font-family: "avenir-demi";
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__lastorder--date {
+    &__lastorder--date,
+    &__location--info,
+    &__quantity--value,
+    &__status--display {
       font-family: "avenir-light";
       @include labels;
       color: $black;
-      width: 13.8%;
-      margin-top: 0;
-      margin-left: 3.125%;
+      width: 18%;
+      margin: 0 0 0 3.125%;
+      padding-top: 15px;
     }
-    &__location {
-      display: none;
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__location--info {
-      display: flex;
-      flex-direction: row;
-      margin-left: 3.125%;
-      width: 13.8%;
-    }
-    &__location--city {
-      font-family: "avenir-light";
-      @include labels;
-      color: $black;
-      margin-top: 0;
-    }
+    &__location--city,
     &__location--country {
       font-family: "avenir-light";
       @include labels;
       color: $black;
       margin-top: 0;
     }
-    &__quantity {
-      display: none;
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__quantity--value {
-      font-family: "avenir-light";
-      @include labels;
-      color: $black;
-      width: 13.8%;
-      margin-top: 0;
-      margin-left: 3.125%;
-    }
-    &__status {
-      display: none;
-      @include lists;
-      color: $silver;
-      margin-top: 0;
-    }
-    &__status--display {
-      font-family: "avenir-light";
-      @include labels;
-      color: $black;
-      width: 13.8%;
-      margin-top: 0;
-      margin-left: 3.125%;
-    }
     &__additem {
       width: 80px;
       height: 80px;
+
+      position: fixed;
+      bottom: 4rem;
+      right: 16rem;
+      border-radius: 50%;
+      background-image: url("../Assets/Icons/SVG/Icon-add.svg");
+      background-repeat: no-repeat;
+      background-position: 1.6rem;
     }
   }
 }

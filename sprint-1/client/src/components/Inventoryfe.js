@@ -76,12 +76,15 @@ class Inventoryfe extends React.Component {
               placeholder=""
             />
           </div>
-          <div className="inventory__title">
-            <h2 className="inventory__title--item">ITEM</h2>
-            <h2 className="inventory__title--lastorder">LAST ORDERED</h2>
-            <h2 className="inventory__title--location">LOCATION</h2>
-            <h2 className="inventory__title--quantity">QUANTITY</h2>
-            <h2 className="inventory__title--status">STATUS</h2>
+          <div className="inventory__top">
+            <div className="inventory__title">
+              <h2 className="inventory__title--item">ITEM</h2>
+              <h2 className="inventory__title--lastorder">LAST ORDERED</h2>
+              <h2 className="inventory__title--location">LOCATION</h2>
+              <h2 className="inventory__title--quantity">QUANTITY</h2>
+              <h2 className="inventory__title--status">STATUS</h2>
+            </div>
+            <h2 className="inventory__title--space"></h2>
           </div>
           <div className="inventory__maincontent">{inventoryElements}</div>
           <button

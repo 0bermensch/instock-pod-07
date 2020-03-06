@@ -678,6 +678,7 @@ a {
   color: #323232;
   margin-top: 16px;
   margin-bottom: 0;
+  margin-left: 0.3rem;
 }
 
 .inventory__quantity {
@@ -724,8 +725,9 @@ a {
 .inventory__additem {
   width: 60px;
   height: 60px;
-  position: absolute;
-  margin-left: 70%;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
   border-radius: 50%;
   background-image: url("../Assets/Icons/SVG/Icon-add.svg");
   background-repeat: no-repeat;
@@ -768,7 +770,20 @@ a {
     border: 1.5px solid #e1e1e1;
     background-color: #fafafa;
   }
+  .inventory__main {
+    padding-bottom: 0;
+  }
+  .inventory__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .inventory__title {
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -778,39 +793,16 @@ a {
             flex-direction: row;
   }
   .inventory__title--item {
-    width: 30%;
+    width: 36%;
     font-family: "avenir-demi";
     font-size: 12px;
     line-height: 20px;
     color: #afafaf;
+    margin: 0;
   }
-  .inventory__title--lastorder {
-    width: 13.8%;
-    margin-left: 3.125%;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
-  }
-  .inventory__title--location {
-    width: 13.8%;
-    margin-left: 3.125%;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
-  }
-  .inventory__title--quantity {
-    width: 13.8%;
-    margin-left: 3.125%;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
-  }
-  .inventory__title--status {
-    width: 13.8%;
-    margin-left: 3.125%;
+  .inventory__title--lastorder, .inventory__title--location, .inventory__title--quantity, .inventory__title--status {
+    width: 18%;
+    margin: 0 0 0 3.125%;
     font-family: "avenir-demi";
     font-size: 12px;
     line-height: 20px;
@@ -848,8 +840,21 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     margin: 24px 0;
+    width: 90%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .inventory__item--title, .inventory__lastorder, .inventory__location, .inventory__quantity, .inventory__status {
+    display: none;
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
   }
   .inventory__item {
+    width: 36%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -857,15 +862,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 30%;
-  }
-  .inventory__item--title {
-    display: none;
-    font-family: "avenir-demi";
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
   }
   .inventory__item--name {
     font-family: "avenir-demi";
@@ -885,96 +881,32 @@ a {
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-  .inventory__lastorder {
-    display: none;
-    font-family: "avenir-demi";
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__lastorder--date {
+  .inventory__lastorder--date, .inventory__location--info, .inventory__quantity--value, .inventory__status--display {
     font-family: "avenir-light";
     font-size: 12px;
     line-height: 20px;
     color: #323232;
-    width: 13.8%;
-    margin-top: 0;
-    margin-left: 3.125%;
+    width: 18%;
+    margin: 0 0 0 3.125%;
     padding-top: 15px;
   }
-  .inventory__location {
-    display: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__location--info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-left: 3.125%;
-    width: 13.8%;
-    padding-top: 15px;
-  }
-  .inventory__location--city {
+  .inventory__location--city, .inventory__location--country {
     font-family: "avenir-light";
     font-size: 12px;
     line-height: 20px;
     color: #323232;
     margin-top: 0;
   }
-  .inventory__location--country {
-    font-family: "avenir-light";
-    font-size: 12px;
-    line-height: 20px;
-    color: #323232;
-    margin-top: 0;
-  }
-  .inventory__quantity {
-    display: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__quantity--value {
-    font-family: "avenir-light";
-    font-size: 12px;
-    line-height: 20px;
-    color: #323232;
-    width: 13.8%;
-    margin-top: 0;
-    margin-left: 3.125%;
-    padding-top: 15px;
-  }
-  .inventory__status {
-    display: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__status--display {
-    font-family: "avenir-light";
-    font-size: 12px;
-    line-height: 20px;
-    color: #323232;
-    width: 13.8%;
-    margin-top: 0;
-    margin-left: 3.125%;
-    padding-top: 15px;
-  }
-  .inventory__remove {
-    width: 10%;
-    height: 20px;
-    margin-top: 40px;
-    margin-bottom: 0;
+  .inventory__additem {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    background-image: url("../Assets/Icons/SVG/Icon-add.svg");
+    background-repeat: no-repeat;
+    background-position: 1.1rem;
   }
 }
 
@@ -1011,7 +943,10 @@ a {
     border: 1.5px solid #e1e1e1;
     background-color: #fafafa;
   }
-  .inventory__title {
+  .inventory__main {
+    padding-bottom: 0;
+  }
+  .inventory__top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1019,43 +954,28 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-bottom: 8px;
+  }
+  .inventory__title {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .inventory__title--item {
-    width: 30.8%;
+    width: 36%;
+    font-family: "avenir-demi";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
     margin: 0;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
   }
-  .inventory__title--lastorder {
-    width: 10%;
-    margin: 0;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
-  }
-  .inventory__title--location {
-    width: 10%;
-    margin: 0 0 0 5.2%;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
-  }
-  .inventory__title--quantity {
-    width: 10%;
-    margin: 0 0 0 5.2%;
-    font-family: "avenir-demi";
-    font-size: 12px;
-    line-height: 20px;
-    color: #afafaf;
-  }
-  .inventory__title--status {
-    width: 10%;
-    margin: 0 0 0 5.2%;
+  .inventory__title--lastorder, .inventory__title--location, .inventory__title--quantity, .inventory__title--status {
+    width: 18%;
+    margin: 0 0 0 3.125%;
     font-family: "avenir-demi";
     font-size: 12px;
     line-height: 20px;
@@ -1093,8 +1013,21 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     margin: 24px 0;
+    width: 90%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .inventory__item--title, .inventory__lastorder, .inventory__location, .inventory__quantity, .inventory__status {
+    display: none;
+    font-family: "avenir-demi";
+    font-size: 14px;
+    line-height: 20px;
+    color: #afafaf;
+    margin-top: 0;
   }
   .inventory__item {
+    width: 36%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1102,15 +1035,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 31.185%;
-  }
-  .inventory__item--title {
-    display: none;
-    font-family: "avenir-demi";
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
   }
   .inventory__item--name {
     font-family: "avenir-demi";
@@ -1130,90 +1054,32 @@ a {
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-  .inventory__lastorder {
-    display: none;
-    font-family: "avenir-demi";
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__lastorder--date {
+  .inventory__lastorder--date, .inventory__location--info, .inventory__quantity--value, .inventory__status--display {
     font-family: "avenir-light";
     font-size: 12px;
     line-height: 20px;
     color: #323232;
-    width: 13.8%;
-    margin-top: 0;
-    margin-left: 3.125%;
+    width: 18%;
+    margin: 0 0 0 3.125%;
+    padding-top: 15px;
   }
-  .inventory__location {
-    display: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__location--info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-left: 3.125%;
-    width: 13.8%;
-  }
-  .inventory__location--city {
+  .inventory__location--city, .inventory__location--country {
     font-family: "avenir-light";
     font-size: 12px;
     line-height: 20px;
     color: #323232;
     margin-top: 0;
-  }
-  .inventory__location--country {
-    font-family: "avenir-light";
-    font-size: 12px;
-    line-height: 20px;
-    color: #323232;
-    margin-top: 0;
-  }
-  .inventory__quantity {
-    display: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__quantity--value {
-    font-family: "avenir-light";
-    font-size: 12px;
-    line-height: 20px;
-    color: #323232;
-    width: 13.8%;
-    margin-top: 0;
-    margin-left: 3.125%;
-  }
-  .inventory__status {
-    display: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #afafaf;
-    margin-top: 0;
-  }
-  .inventory__status--display {
-    font-family: "avenir-light";
-    font-size: 12px;
-    line-height: 20px;
-    color: #323232;
-    width: 13.8%;
-    margin-top: 0;
-    margin-left: 3.125%;
   }
   .inventory__additem {
     width: 80px;
     height: 80px;
+    position: fixed;
+    bottom: 4rem;
+    right: 16rem;
+    border-radius: 50%;
+    background-image: url("../Assets/Icons/SVG/Icon-add.svg");
+    background-repeat: no-repeat;
+    background-position: 1.6rem;
   }
 }
 
@@ -1251,14 +1117,32 @@ a {
   /* 18px */
 }
 
+.locations__labels {
+  display: none;
+}
+
 .locations__info {
   font-size: 0.812rem;
   /* 13px */
   line-height: 1.125rem;
   /* 18px */
   line-height: 1.25rem;
-  padding: 2rem 0 1.5rem 0;
+  margin: 2rem 0 1.5rem 0;
   border-bottom: solid #e1e1e1 1.5px;
+}
+
+.locations__arrow-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.locations__arrow {
+  padding-right: 0.5rem;
 }
 
 .locations__info-section {
@@ -1275,6 +1159,33 @@ a {
 
 .locations__contact-position {
   font-style: italic;
+}
+
+.locations__dt-arrow {
+  display: none;
+}
+
+.locations__circle {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 50%;
+  background-color: #004892;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1.5rem;
+}
+
+.locations__plus {
+  height: 1.25rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1307,16 +1218,74 @@ a {
     width: 15.625rem;
     /*250px*/
   }
+  .locations__info-section--1 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
   .locations__info {
-    padding-bottom: 1.5rem;
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.375rem;
+    /* 22px */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .locations__info-section--bottom {
+    width: 30%;
+  }
+  .locations__circle {
+    bottom: 5rem;
+    right: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .locations {
+    padding: 0 11.25rem;
+    /*180px*/
+  }
+  .locations__arrow-container {
+    display: none;
+  }
+  .locations__dt-arrow {
+    display: inline;
+    padding-right: 1rem;
   }
   .locations__info-section--1 {
+    width: 25%;
+  }
+  .locations__info-section--bottom {
+    width: 25%;
+  }
+  .locations__dt-arrow-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .locations__labels {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .locations__label {
+    width: 30%;
+    font-size: 0.75rem;
+    /* 12px */
+    line-height: 1.25rem;
+    /* 20px */
+    font-family: "avenir-demi";
+    text-transform: uppercase;
+    color: #afafaf;
+  }
+  .locations__circle {
+    right: 15rem;
   }
 }
 
