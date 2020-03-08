@@ -167,6 +167,22 @@
 @include tablet {
   .inventory {
     margin: 0 3.125%;
+
+    &__removeTooltip {
+      float: right;
+      position: fixed;
+      display: flex;
+      left: 83%;
+      top: 37%;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      border: 1px solid $black;
+      width: 7rem;
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+
     &__head {
       display: flex;
       flex-direction: row;

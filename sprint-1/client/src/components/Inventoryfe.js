@@ -1,6 +1,7 @@
 import React from "react";
 import removebutton from "../Assets/Icons/SVG/Icon-kebab-default.svg";
 import CreateNew from "./createNew";
+import ToolTip from "./ToolTip";
 import Modal from "react-responsive-modal";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -9,7 +10,8 @@ class Inventoryfe extends React.Component {
   state = {
     inventoryElements: [],
     open: false,
-    product: {}
+    product: {},
+    toolTip: false
   };
 
   onOpenModal = () => {
@@ -36,6 +38,23 @@ class Inventoryfe extends React.Component {
     } else {
       window.alert("item not found");
     }
+  };
+  deleteHandler = event => {
+    event.preventDefault();
+  };
+
+  renderTooltip = () => {
+    if (this.state.toolTip) {
+      return (
+        <span className="inventory__removeTooltip" onClick={this.deleteHandler}>
+          Remove
+        </span>
+      );
+    }
+  };
+
+  openTooltip = () => {
+    this.setState({ toolTip: !this.state.toolTip });
   };
 
   render() {
@@ -76,7 +95,9 @@ class Inventoryfe extends React.Component {
                 {inventorythings.status}
               </h3>
             </div>
+            <ToolTip toolTip={this.state.toolTip} />
             <img
+              onClick={this.openTooltip}
               className="inventory__remove"
               src={removebutton}
               alt="removebtn"
@@ -102,6 +123,7 @@ class Inventoryfe extends React.Component {
               />
             </form>
           </div>
+
           <div className="inventory__top">
             <div className="inventory__title">
               <h2 className="inventory__title--item">ITEM</h2>
@@ -112,6 +134,7 @@ class Inventoryfe extends React.Component {
             </div>
             <h2 className="inventory__title--space"> </h2>
           </div>
+
           <div className="inventory__maincontent">{inventoryElements}</div>
           <button
             className="inventory__additem"
@@ -119,6 +142,7 @@ class Inventoryfe extends React.Component {
             onClick={this.onOpenModal}
           />
         </div>
+
         <Modal open={open} onClose={this.onCloseModal}>
           <CreateNew
             inventory={this.props.inventory}
