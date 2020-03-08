@@ -1,8 +1,14 @@
+.styles_closeButton__20ID4 {
+  display: none;
+}
 .inventory {
   margin: 0 5%;
   &__head {
     display: flex;
     flex-direction: column;
+  }
+  &__head--form {
+    flex: 0.27637;
   }
   &__head--title {
     margin-top: 32px;
@@ -111,6 +117,7 @@
     color: $black;
     margin-top: 16px;
     margin-bottom: 0;
+    margin-left: 0.3rem;
   }
   &__quantity {
     @include lists-m;
@@ -160,22 +167,39 @@
 @include tablet {
   .inventory {
     margin: 0 3.125%;
+
+    &__removeTooltip {
+      float: right;
+      position: fixed;
+      display: flex;
+      left: 83%;
+      top: 37%;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      border: 1px solid $black;
+      width: 7rem;
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+
     &__head {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: 20px 0;
+      margin-bottom: 2rem;
     }
     &__head--title {
-      margin-top: 32px;
       font-family: "avenir-bold";
-      @include header-2;
+      @include header;
+      margin-top: 1rem;
       color: $black;
     }
     &__head--search {
       margin-top: 16px;
       height: 40px;
-      width: 34%;
+      width: 100%;
       background-image: url("../Assets/Icons/SVG/Icon-search.svg");
       background-repeat: no-repeat;
       background-position: 1rem;
@@ -229,7 +253,7 @@
     &__information {
       display: flex;
       flex-direction: row;
-      margin: 24px 0;
+      margin: 1rem 0;
       width: 90%;
       justify-content: space-between;
     }
@@ -305,6 +329,9 @@
       flex-direction: row;
       margin: 48px 0;
     }
+    &__head--form {
+      flex: 0.27637;
+    }
     &__head--title {
       margin: 0;
       font-family: "avenir-bold";
@@ -314,7 +341,7 @@
     &__head--search {
       margin-top: 0;
       height: 48px;
-      width: 23.5%;
+      width: 100%;
       background-image: url("../Assets/Icons/SVG/Icon-search.svg");
       background-repeat: no-repeat;
       background-position: 1rem;
@@ -425,6 +452,10 @@
     &__additem {
       width: 80px;
       height: 80px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
       position: fixed;
       bottom: 4rem;
       right: 16rem;
@@ -432,7 +463,10 @@
       background-image: url("../Assets/Icons/SVG/Icon-add.svg");
       background-repeat: no-repeat;
       background-position: 1.6rem;
+<<<<<<< HEAD
       background-position: 1.1rem;
+=======
+>>>>>>> master
     }
   }
 }
