@@ -45,9 +45,13 @@ router.delete("/:id", (req, res) => {
   res.json(newInventory);
 });
 
-//get single item by id
-router.get("/:id", (req, res) => {
-  const invItem = inventoryItems.filter(item => req.params.id === item.id);
+//get single item by productname
+router.get("/:productname", (req, res) => {
+  const invItem = inventoryItems.filter(
+    item =>
+      req.params.productname.toLowerCase() === item.productname.toLowerCase()
+  );
   res.json(invItem);
 });
+
 module.exports = router;

@@ -1,10 +1,11 @@
 import React from "react";
 import LocationsRender from "./LocationsRender";
 import Plus from "../Assets/Icons/SVG/Icon-add.svg";
+import { v4 as uuidv4 } from "uuid";
 
 const Locations = props => {
   return (
-    <section className="locations">
+    <section className="locations" key={uuidv4()}>
       <div className="locations__top">
         <h1 className="locations__header">Locations</h1>
         <input className="locations__search" type="text" placeholder="Search" />
@@ -30,7 +31,7 @@ const Locations = props => {
         );
       })}
       <div className="locations__circle">
-        <img className="locations__plus" src={Plus} />
+        <img className="locations__plus" src={Plus} alt="add" />
       </div>
     </section>
   );

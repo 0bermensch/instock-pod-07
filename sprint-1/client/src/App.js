@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./components/header";
 import Locations from "./components/Locations";
-import ProductSummary from "./components/productSummary";
 import Inventoryfe from "./components/Inventoryfe";
+import ProductSummary from "./components/productSummary";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
@@ -10,8 +10,8 @@ export default class App extends React.Component {
   state = {
     locations: [],
     inventory: [],
-    product: {},
-    locationOptions: []
+    locationOptions: [],
+    product: {}
   };
 
   componentDidMount() {
@@ -23,10 +23,15 @@ export default class App extends React.Component {
     this.updateInventory();
   }
 
+  updateProduct = newProduct => {
+    this.setState({ product: newProduct, redirect: true });
+    localStorage.setItem("product", JSON.stringify(newProduct));
+    window.location.pathname = "/productSummary";
+  };
+
   updateInventory = () => {
     axios.get("/api/Inventory").then(response => {
       this.setState({ inventory: response.data });
-      this.setState({ product: response.data[0] });
     });
   };
 
@@ -34,19 +39,18 @@ export default class App extends React.Component {
     return (
       <>
         <Router>
+          <Header />
           <Switch>
             <Route
               path="/"
               exact
               render={() => {
                 return (
-                  <>
-                    <Header />
-                    <Inventoryfe
-                      inventory={this.state.inventory}
-                      updateInventory={this.updateInventory}
-                    />
-                  </>
+                  <Inventoryfe
+                    updateProduct={this.updateProduct}
+                    inventory={this.state.inventory}
+                    updateInventory={this.updateInventory}
+                  />
                 );
               }}
             />
@@ -54,27 +58,30 @@ export default class App extends React.Component {
               path="/inventory"
               render={() => {
                 return (
-                  <>
-                    <Header />
-                    <Inventoryfe
-                      inventory={this.state.inventory}
-                      updateInventory={this.updateInventory}
-                    />
-                  </>
+                  <Inventoryfe
+                    updateProduct={this.updateProduct}
+                    inventory={this.state.inventory}
+                    updateInventory={this.updateInventory}
+                  />
                 );
               }}
             />
             <Route
               path="/locations"
               render={() => {
-                return (
-                  <>
-                    <Header />
-                    <Locations locations={this.state.locations} />
-                  </>
-                );
+                return <Locations locations={this.state.locations} />;
               }}
             ></Route>
+            <Route
+              path="/productSummary"
+              render={() => {
+                return (
+                  <ProductSummary
+                    product={JSON.parse(localStorage.getItem("product"))}
+                  />
+                );
+              }}
+            />
           </Switch>
         </Router>
       </>
