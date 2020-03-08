@@ -2,6 +2,7 @@ a {
   text-decoration: none;
   color: $white;
 }
+
 .header {
   background-color: $black;
   height: 80px;
@@ -46,8 +47,12 @@ a {
       align-items: center;
 
       &-link {
+        flex: 0.25;
         padding: 2rem 0 1.6rem 0;
         margin: 0 1rem 0 1rem;
+      }
+      &-link--active {
+        flex: 0.25;
       }
     }
     &__logo {
@@ -62,6 +67,12 @@ a {
     padding: 0 11.25rem;
     &__nav {
       flex: 0.3;
+      &-link {
+        flex: 0.35;
+      }
+      &-link--active {
+        flex: 0.35;
+      }
     }
     &__logo {
       margin-right: 2rem;

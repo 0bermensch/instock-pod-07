@@ -211,8 +211,16 @@ a {
             align-items: center;
   }
   .header__nav-link {
+    -webkit-box-flex: 0.25;
+        -ms-flex: 0.25;
+            flex: 0.25;
     padding: 2rem 0 1.6rem 0;
     margin: 0 1rem 0 1rem;
+  }
+  .header__nav-link--active {
+    -webkit-box-flex: 0.25;
+        -ms-flex: 0.25;
+            flex: 0.25;
   }
   .header__logo {
     padding: 0;
@@ -228,6 +236,16 @@ a {
     -webkit-box-flex: 0.3;
         -ms-flex: 0.3;
             flex: 0.3;
+  }
+  .header__nav-link {
+    -webkit-box-flex: 0.35;
+        -ms-flex: 0.35;
+            flex: 0.35;
+  }
+  .header__nav-link--active {
+    -webkit-box-flex: 0.35;
+        -ms-flex: 0.35;
+            flex: 0.35;
   }
   .header__logo {
     margin-right: 2rem;
@@ -508,6 +526,10 @@ a {
   }
 }
 
+.styles_closeButton__20ID4 {
+  display: none;
+}
+
 .inventory {
   margin: 0 5%;
 }
@@ -520,6 +542,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.inventory__head--form {
+  -webkit-box-flex: 0.27637;
+      -ms-flex: 0.27637;
+          flex: 0.27637;
 }
 
 .inventory__head--title {
@@ -750,18 +778,19 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 20px 0;
+    margin-bottom: 2rem;
   }
   .inventory__head--title {
-    margin-top: 32px;
     font-family: "avenir-bold";
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 1rem;
     color: #323232;
   }
   .inventory__head--search {
     margin-top: 16px;
     height: 40px;
-    width: 34%;
+    width: 100%;
     background-image: url("../Assets/Icons/SVG/Icon-search.svg");
     background-repeat: no-repeat;
     background-position: 1rem;
@@ -839,7 +868,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 24px 0;
+    margin: 1rem 0;
     width: 90%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -924,6 +953,11 @@ a {
             flex-direction: row;
     margin: 48px 0;
   }
+  .inventory__head--form {
+    -webkit-box-flex: 0.27637;
+        -ms-flex: 0.27637;
+            flex: 0.27637;
+  }
   .inventory__head--title {
     margin: 0;
     font-family: "avenir-bold";
@@ -934,7 +968,7 @@ a {
   .inventory__head--search {
     margin-top: 0;
     height: 48px;
-    width: 23.5%;
+    width: 100%;
     background-image: url("../Assets/Icons/SVG/Icon-search.svg");
     background-repeat: no-repeat;
     background-position: 1rem;
