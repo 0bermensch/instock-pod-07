@@ -108,15 +108,5 @@
     "quantity": "12,000",
     "status": "Out of Stock",
     "category": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation, Sales"
-  },
-  {
-    "id": "85f76ae4-c645-4b2d-8fd7-1c1616b3d11b",
-    "productname": "123123",
-    "productdescription": "123123123213",
-    "lastordered": "123123",
-    "city": "123123",
-    "country": " BRA",
-    "quantity": "123123",
-    "status": "In Stock"
   }
 ]

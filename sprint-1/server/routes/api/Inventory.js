@@ -38,9 +38,12 @@ router.post("/", (req, res) => {
   res.json(inventoryItems);
 });
 
-//delete inventory item by id
-router.delete("/:id", (req, res) => {
-  const newInventory = inventoryItems.filter(item => item.id !== req.params.id);
+//delete inventory item by productname
+router.delete("/:productname", (req, res) => {
+  const newInventory = inventoryItems.filter(
+    item =>
+      item.productname.toLowerCase() !== req.params.productname.toLowerCase()
+  );
   helper.writeJSONFile(inventoryFile, newInventory);
   res.json(newInventory);
 });

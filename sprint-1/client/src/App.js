@@ -47,7 +47,6 @@ export default class App extends React.Component {
               render={() => {
                 return (
                   <Inventoryfe
-                    updateProduct={this.updateProduct}
                     inventory={this.state.inventory}
                     updateInventory={this.updateInventory}
                   />
@@ -59,7 +58,6 @@ export default class App extends React.Component {
               render={() => {
                 return (
                   <Inventoryfe
-                    updateProduct={this.updateProduct}
                     inventory={this.state.inventory}
                     updateInventory={this.updateInventory}
                   />
