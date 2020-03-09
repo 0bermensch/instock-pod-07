@@ -534,6 +534,22 @@ a {
   margin: 0 5%;
 }
 
+.inventory__removeTooltip {
+  float: right;
+  display: none;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid #323232;
+  width: 7rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .inventory__head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,21 +783,8 @@ a {
     margin: 0 3.125%;
   }
   .inventory__removeTooltip {
-    position: absolute;
-    display: none;
-    left: 20rem;
-    bottom: 0rem;
-    background-color: white;
-    padding: 0.5rem 1rem;
-    border: 1px solid #323232;
-    width: 7rem;
-    height: 3rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    left: 38rem;
+    top: 3.5rem;
   }
   .inventory__head {
     display: -webkit-box;

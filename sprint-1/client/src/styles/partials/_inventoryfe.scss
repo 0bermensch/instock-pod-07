@@ -3,6 +3,17 @@
 }
 .inventory {
   margin: 0 5%;
+  &__removeTooltip {
+    float: right;
+    display: none;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid $black;
+    width: 7rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
   &__head {
     display: flex;
     flex-direction: column;
@@ -169,17 +180,8 @@
     margin: 0 3.125%;
 
     &__removeTooltip {
-      position: absolute;
-      display: none;
-      left: 20rem;
-      bottom: 0rem;
-      background-color: white;
-      padding: 0.5rem 1rem;
-      border: 1px solid $black;
-      width: 7rem;
-      height: 3rem;
-      justify-content: center;
-      align-items: center;
+      left: 38rem;
+      top: 3.5rem;
     }
 
     &__head {
