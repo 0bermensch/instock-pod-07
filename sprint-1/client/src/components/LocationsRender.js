@@ -2,8 +2,9 @@ import React from "react";
 import Arrow from "../Assets/Icons/SVG/Icon-arrow-right.svg";
 
 const LocationsRender = props => {
+  console.log(props.locationClick);
   return (
-    <div className="locations__info">
+    <div key={props.id} className="locations__info">
       <div className="locations__info-section locations__info-section--1">
         <div className="locations__arrow-container">
           <h4 className="locations__location">{props.warehouse}</h4>
@@ -21,10 +22,14 @@ const LocationsRender = props => {
       </div>
       <div className="locations__info-section locations__info-section--bottom locations__dt-arrow-container">
         <p className="locations__categories">{props.categories}</p>
-        <img className="locations__dt-arrow" src={Arrow} alt="arrow" />
+        <img
+          className="locations__dt-arrow"
+          onClick={() => props.locationClick(props.id)}
+          src={Arrow}
+          alt="arrow"
+        />
       </div>
     </div>
   );
 };
-
 export default LocationsRender;
