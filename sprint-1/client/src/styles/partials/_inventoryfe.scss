@@ -169,11 +169,10 @@
     margin: 0 3.125%;
 
     &__removeTooltip {
-      float: right;
-      position: fixed;
-      display: flex;
-      left: 83%;
-      top: 37%;
+      position: absolute;
+      display: none;
+      left: 20rem;
+      bottom: 0rem;
       background-color: white;
       padding: 0.5rem 1rem;
       border: 1px solid $black;
@@ -242,6 +241,7 @@
     }
     &__main {
       display: flex;
+      position: relative;
       flex-direction: row;
       border-bottom: 1px solid $silver;
     }

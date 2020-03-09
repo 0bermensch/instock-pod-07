@@ -11,7 +11,7 @@ class Inventoryfe extends React.Component {
     inventoryElements: [],
     open: false,
     product: {},
-    toolTip: false
+    tool: true
   };
 
   onOpenModal = () => {
@@ -33,36 +33,38 @@ class Inventoryfe extends React.Component {
     if (names.includes(productName)) {
       axios.get(`/api/Inventory/${productName}`).then(response => {
         this.setState({ product: response.data[0] });
-        this.props.updateProduct(this.state.product);
       });
     } else {
       window.alert("item not found");
     }
   };
-  deleteHandler = event => {
-    event.preventDefault();
-  };
 
-  renderTooltip = () => {
-    if (this.state.toolTip) {
-      return (
-        <span className="inventory__removeTooltip" onClick={this.deleteHandler}>
-          Remove
-        </span>
-      );
+  openToolTip = event => {
+    this.setState({
+      tool: !this.state.tool,
+      itemToDelete:
+        event.target.parentNode.childNodes[0].firstChild.childNodes[1].innerText
+    });
+    localStorage.setItem(
+      "itemName",
+      JSON.stringify(
+        event.target.parentNode.childNodes[0].firstChild.childNodes[1].innerText
+      )
+    );
+    if (this.state.tool) {
+      event.target.parentNode.childNodes[1].style.display = "block";
+    } else {
+      event.target.parentNode.childNodes[1].style.display = "none";
     }
-  };
-
-  openTooltip = () => {
-    this.setState({ toolTip: !this.state.toolTip });
   };
 
   render() {
     const { open } = this.state;
     const inventoryElements = this.props.inventory.map(
       (inventorythings, index) => {
+        const uniqueID = uuidv4();
         return (
-          <div className="inventory__main" key={uuidv4()}>
+          <div className="inventory__main">
             <div className="inventory__information">
               <div className="inventory__item">
                 <h2 className="inventory__item--title">ITEM</h2>
@@ -95,12 +97,20 @@ class Inventoryfe extends React.Component {
                 {inventorythings.status}
               </h3>
             </div>
-            <ToolTip toolTip={this.state.toolTip} />
+
+            <ToolTip
+              toolId={uniqueID}
+              itemToDelete={this.state.ItemToDelete}
+              openToolTip={this.openToolTip}
+              updateInventory={this.props.updateInventory}
+            />
+
             <img
-              onClick={this.openTooltip}
+              onClick={this.openToolTip}
               className="inventory__remove"
               src={removebutton}
               alt="removebtn"
+              id={uniqueID}
             />
           </div>
         );
@@ -145,8 +155,8 @@ class Inventoryfe extends React.Component {
 
         <Modal open={open} onClose={this.onCloseModal}>
           <CreateNew
-            inventory={this.props.inventory}
             updateInventory={this.props.updateInventory}
+            inventory={this.props.inventory}
             close={this.onCloseModal}
           />
         </Modal>

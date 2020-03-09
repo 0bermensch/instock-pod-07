@@ -70,6 +70,9 @@ export default class createNew extends React.Component {
 
   handlePost = event => {
     event.preventDefault();
+    if (this.state.button === "cancel") {
+      this.props.close();
+    }
     if (this.state.button === "save") {
       const productName = event.target.productName.value;
       const description = event.target.description.value;
@@ -104,6 +107,7 @@ export default class createNew extends React.Component {
             this.props.updateInventory();
           });
         event.target.reset();
+        this.props.close();
       }
     }
   };
