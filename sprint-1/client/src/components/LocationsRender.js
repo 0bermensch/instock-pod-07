@@ -26,7 +26,12 @@ const LocationsRender = props => {
       </div>
       <div className="locations__info-section locations__info-section--bottom locations__dt-arrow-container">
         <p className="locations__categories">{props.categories}</p>
-        <img className="locations__dt-arrow" src={Arrow} alt="arrow" />
+        <img
+          className="locations__dt-arrow"
+          src={Arrow}
+          alt="arrow"
+          onClick={() => props.locationClick(props.id)}
+        />
       </div>
     </div>
   );
