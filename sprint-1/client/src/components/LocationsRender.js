@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "../Assets/Icons/SVG/Icon-arrow-right.svg";
+import { Link } from "react-router-dom";
 
 const LocationsRender = props => {
   console.log(props.locationClick);
@@ -22,12 +23,9 @@ const LocationsRender = props => {
       </div>
       <div className="locations__info-section locations__info-section--bottom locations__dt-arrow-container">
         <p className="locations__categories">{props.categories}</p>
-        <img
-          className="locations__dt-arrow"
-          onClick={() => props.locationClick(props.id)}
-          src={Arrow}
-          alt="arrow"
-        />
+        <Link to={`/locations/${props.id}`}>
+          <img className="locations__dt-arrow" src={Arrow} alt="arrow" />
+        </Link>
       </div>
     </div>
   );

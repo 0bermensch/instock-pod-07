@@ -60,6 +60,17 @@ class Locations extends React.Component {
                   categories={location.categories}
                   locationClick={this.locationClick}
                 />
+                <LocationsDetail
+                  id={location.id}
+                  warehouse={location.warehouse}
+                  address={location.address}
+                  contactPerson={location.contactPerson}
+                  contactPosition={location.contactPosition}
+                  contactNumber={location.contactNumber}
+                  contactEmail={location.contactEmail}
+                  categories={location.categories}
+                  locationClick={this.locationClick}
+                />
               </>
             );
           })}

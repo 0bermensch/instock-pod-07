@@ -80,6 +80,7 @@ export default class App extends React.Component {
                 );
               }}
             />
+            <Route path="/locations/:id" />
           </Switch>
         </Router>
       </>
