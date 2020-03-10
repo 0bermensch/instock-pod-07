@@ -20,7 +20,7 @@ export default class App extends React.Component {
   }
 
   updateProduct = newProduct => {
-    this.setState({ product: newProduct, redirect: true });
+    this.setState({ product: newProduct });
     localStorage.setItem("product", JSON.stringify(newProduct));
     window.location.pathname = "/productSummary";
   };
@@ -69,7 +69,12 @@ export default class App extends React.Component {
             <Route
               path="/locations"
               render={() => {
-                return <Locations locations={this.state.locations} />;
+                return (
+                  <Locations
+                    locations={this.state.locations}
+                    inventory={this.state.inventory}
+                  />
+                );
               }}
             ></Route>
             <Route
