@@ -1,11 +1,7 @@
 import React from "react";
 import LocationsRender from "./LocationsRender";
 import Plus from "../Assets/Icons/SVG/Icon-add.svg";
-// import { v4 as uuidv4 } from "uuid";
-import LocationsDetail from "./LocationsDetail";
 import axios from "axios";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
 class Locations extends React.Component {
   constructor() {
     super();
@@ -15,8 +11,6 @@ class Locations extends React.Component {
   }
 
   locationClick = id => {
-    console.log("locationClick", id);
-
     axios.get(`/api/locations/${id}`).then(res => {
       console.log(res.data);
       this.setState({
@@ -78,9 +72,6 @@ class Locations extends React.Component {
             <img className="locations__plus" src={Plus} alt="add" />
           </div>
         </section>
-        <Router>
-          <Route path="/locations/:id" component={LocationsDetail} />
-        </Router>
       </>
     );
   }

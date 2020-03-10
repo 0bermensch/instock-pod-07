@@ -52,7 +52,7 @@ class Inventoryfe extends React.Component {
       )
     );
     if (this.state.tool) {
-      event.target.parentNode.childNodes[1].style.display = "block";
+      event.target.parentNode.childNodes[1].style.display = "flex";
     } else {
       event.target.parentNode.childNodes[1].style.display = "none";
     }

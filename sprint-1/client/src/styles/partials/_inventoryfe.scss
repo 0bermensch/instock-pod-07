@@ -3,6 +3,19 @@
 }
 .inventory {
   margin: 0 5%;
+  &__removeTooltip {
+    position: relative;
+    right: 2rem;
+    top: 1rem;
+    display: none;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid $black;
+    width: 7rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
   &__head {
     display: flex;
     flex-direction: column;
@@ -36,6 +49,7 @@
   &__main {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     border-bottom: 0.5px solid $silver;
     padding-bottom: 20px;
     margin-bottom: 0;
@@ -169,17 +183,8 @@
     margin: 0 3.125%;
 
     &__removeTooltip {
-      position: absolute;
-      display: none;
-      left: 20rem;
-      bottom: 0rem;
-      background-color: white;
-      padding: 0.5rem 1rem;
-      border: 1px solid $black;
-      width: 7rem;
-      height: 3rem;
-      justify-content: center;
-      align-items: center;
+      right: -4rem;
+      top: 4rem;
     }
 
     &__head {
@@ -324,6 +329,10 @@
 @include desk {
   .inventory {
     margin: 0 12.5%;
+    &__removeTooltip {
+      right: -6rem;
+      top: 4.5rem;
+    }
     &__head {
       display: flex;
       flex-direction: row;
