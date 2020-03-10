@@ -1,7 +1,10 @@
 import React from "react";
 import LocationsRender from "./LocationsRender";
+import LocationsDetail from "./LocationsDetail";
 import Plus from "../Assets/Icons/SVG/Icon-add.svg";
-import axios from "axios";
+// import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 class Locations extends React.Component {
   constructor() {
     super();
@@ -10,14 +13,14 @@ class Locations extends React.Component {
     };
   }
 
-  locationClick = id => {
-    axios.get(`/api/locations/${id}`).then(res => {
-      console.log(res.data);
-      this.setState({
-        locationDetail: res.data
-      });
-    });
-  };
+  // locationClick = id => {
+  //   axios.get(`/api/locations/${id}`).then(res => {
+  //     console.log(res.data);
+  //     this.setState({
+  //       locationDetail: res.data
+  //     });
+  //   });
+  // };
 
   render() {
     return (
@@ -52,7 +55,6 @@ class Locations extends React.Component {
                   contactNumber={location.contactNumber}
                   contactEmail={location.contactEmail}
                   categories={location.categories}
-                  locationClick={this.locationClick}
                 />
                 <LocationsDetail
                   id={location.id}
@@ -72,6 +74,11 @@ class Locations extends React.Component {
             <img className="locations__plus" src={Plus} alt="add" />
           </div>
         </section>
+        {/* <Router>
+          <Switch>
+            <Route path="/locations/:id" component={LocationsRender} />
+          </Switch>
+        </Router> */}
       </>
     );
   }

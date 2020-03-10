@@ -4,16 +4,17 @@ import axios from "axios";
 export default class LocationsDetail extends Component {
   constructor() {
     super();
-    state = {
-      locationDetail: {}
+    this.state = {
+      locationDetails: []
     };
   }
+
   componentDidMount() {
-    console.log(props);
-    axios.get(`/api/locations/${props.id}`).then(res => {
+    console.log(this.props);
+    axios.get(`/api/locations/${this.props.id}`).then(res => {
       console.log(res.data);
       this.setState({
-        locationDetail: res.data
+        locationDetails: res.data
       });
     });
   }

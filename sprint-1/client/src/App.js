@@ -15,12 +15,8 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
-    axios.get("api/locations").then(response => {
-      this.setState({
-        locations: response.data
-      });
-    });
     this.updateInventory();
+    this.updateLocations();
   }
 
   updateProduct = newProduct => {
@@ -32,6 +28,12 @@ export default class App extends React.Component {
   updateInventory = () => {
     axios.get("/api/Inventory").then(response => {
       this.setState({ inventory: response.data });
+    });
+  };
+
+  updateLocations = () => {
+    axios.get("/api/locations").then(response => {
+      this.setState({ locations: response.data });
     });
   };
 
@@ -80,7 +82,6 @@ export default class App extends React.Component {
                 );
               }}
             />
-            <Route path="/locations/:id" />
           </Switch>
         </Router>
       </>
