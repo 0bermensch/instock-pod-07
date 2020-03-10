@@ -535,7 +535,9 @@ a {
 }
 
 .inventory__removeTooltip {
-  float: right;
+  position: relative;
+  right: 2rem;
+  top: 1rem;
   display: none;
   background-color: white;
   padding: 0.5rem 1rem;
@@ -601,6 +603,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 0.5px solid #afafaf;
   padding-bottom: 20px;
   margin-bottom: 0;
@@ -783,8 +788,8 @@ a {
     margin: 0 3.125%;
   }
   .inventory__removeTooltip {
-    left: 38rem;
-    top: 3.5rem;
+    right: -4rem;
+    top: 4rem;
   }
   .inventory__head {
     display: -webkit-box;
@@ -963,6 +968,10 @@ a {
 @media only screen and (min-width: 1440px) {
   .inventory {
     margin: 0 12.5%;
+  }
+  .inventory__removeTooltip {
+    right: -6rem;
+    top: 4.5rem;
   }
   .inventory__head {
     display: -webkit-box;
@@ -1172,7 +1181,7 @@ a {
   /* 18px */
 }
 
-.locations__labels {
+.locations__label {
   display: none;
 }
 

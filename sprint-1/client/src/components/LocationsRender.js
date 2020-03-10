@@ -3,11 +3,16 @@ import Arrow from "../Assets/Icons/SVG/Icon-arrow-right.svg";
 
 const LocationsRender = props => {
   return (
-    <div className="locations__info">
+    <div key={props.id} className="locations__info">
       <div className="locations__info-section locations__info-section--1">
         <div className="locations__arrow-container">
           <h4 className="locations__location">{props.warehouse}</h4>
-          <img className="locations__arrow" src={Arrow} alt="arrow" />
+          <img
+            className="locations__arrow"
+            src={Arrow}
+            alt="arrow"
+            onClick={() => props.locationClick(props.id)}
+          />
         </div>
         <p className="locations__address">{props.address}</p>
       </div>
@@ -26,5 +31,4 @@ const LocationsRender = props => {
     </div>
   );
 };
-
 export default LocationsRender;

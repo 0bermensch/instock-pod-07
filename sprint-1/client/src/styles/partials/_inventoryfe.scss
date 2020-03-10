@@ -4,7 +4,9 @@
 .inventory {
   margin: 0 5%;
   &__removeTooltip {
-    float: right;
+    position: relative;
+    right: 2rem;
+    top: 1rem;
     display: none;
     background-color: white;
     padding: 0.5rem 1rem;
@@ -47,6 +49,7 @@
   &__main {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     border-bottom: 0.5px solid $silver;
     padding-bottom: 20px;
     margin-bottom: 0;
@@ -180,8 +183,8 @@
     margin: 0 3.125%;
 
     &__removeTooltip {
-      left: 38rem;
-      top: 3.5rem;
+      right: -4rem;
+      top: 4rem;
     }
 
     &__head {
@@ -326,6 +329,10 @@
 @include desk {
   .inventory {
     margin: 0 12.5%;
+    &__removeTooltip {
+      right: -6rem;
+      top: 4.5rem;
+    }
     &__head {
       display: flex;
       flex-direction: row;
@@ -454,7 +461,6 @@
     &__additem {
       width: 80px;
       height: 80px;
-
       position: fixed;
       bottom: 4rem;
       right: 16rem;
